@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">	<title>你好</title>
+
+    <style>
+
+    .body{}
+
+    .op{color:#fffffe}
+
+    </style>
+
+  </head>
+
+  <body class="body" id="bod">	
+
+    <p class="op" id="oo"></p>
+
+    <script>
+
+     var io=prompt("");
+
+     var kn=document.getElementById("oo");
+
+     var lon=0;
+
+     setInterval(function (){
+
+        if(lon>=io.length){
+
+          return
+
+        }
+
+       kn.innerText+=io[lon]
+
+       lon+=1;
+
+     },170)
+
+    document.getElementById("bod").background="https://p3-search.byteimg.com/obj/labis/6b716d16c6cb60cd570f1e650ba4482e"
+
+    </script>
+
+  </body>
+
+</html>

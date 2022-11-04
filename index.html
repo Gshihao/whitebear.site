@@ -4,61 +4,73 @@
 
   <head>
 
-	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">	<title>你好</title>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">	<title>欢迎光临</title>
 
     <style>
 
-    .body{}
+     .body-as{width:100%w;background-size:100%;}
 
-    .op{color:#fffffe;
+     .dic-b{
 
-       width:100%w;
+       width:100%;
 
-       text-align:center;
+       height:100px;
 
-       ;
+       background-color:#fefefe;
 
-      }
+       margin-top:20%;
+
+       opacity:0.4;
+
+       border-radius:20px;
+
+       }
+
+   .iop{width:100%w;text-align:center;}
+
+   .poi{width:100%w;height:100%h;text-indent:2em}
 
     </style>
 
   </head>
 
-  <body class="body" id="bod">	
+  <body class="body-as" id="body">
 
-    <p class="op" id="oo"></p>
+   <div class="dic-b">
 
-    <script>
+    <p class="iop">你好，2022</p>
 
-     var a1="你好，2023"
+    <p class="poi" id="poi">lua爬取QQ音乐热榜</p>
 
-      var io=a1
+   </div>
 
-     //prompt("");
+   <script>
 
-     var kn=document.getElementById("oo");
+    document.getElementById("body").background="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fnimg.ws.126.net%2F%3Furl%3Dhttp%253A%252F%252Fdingyue.ws.126.net%252F2021%252F1216%252Fd90cbc77j00r47br40052c000hs012ic.jpg%26thumbnail%3D650x2147483647%26quality%3D80%26type%3Djpg&refer=http%3A%2F%2Fnimg.ws.126.net&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1669706337&t=ae301cf5655f45198e15903b94a98701"
 
-     var lon=0;
+    var stringa="";
 
-     setInterval(function (){
+    var longa=0;
 
-        if(lon>=io.length){
+    
 
-          return
+     window.onload=function (){
 
-        }
+      setInterval(function (){
 
-       kn.innerText+=io[lon]
+        
 
-       lon+=1;
+      },170);
 
-     },170)
+     }
 
-   //打字的时间
+    poi.onclick=function (){
 
-    document.getElementById("bod").background="https://p3-search.byteimg.com/obj/labis/6b716d16c6cb60cd570f1e650ba4482e"
+     window.open("luapqqq.html")
 
-    </script>
+    }
+
+   </script>	  
 
   </body>
 

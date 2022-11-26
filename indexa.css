@@ -1,0 +1,67 @@
+ body {
+   background-image:url("https://p3-search.byteimg.com/obj/tos-cn-i-qvj2lq49k0/4a84cac170594cb49028061bb56aaed8");
+   background-size:100%;
+   background-repeat:true;
+   }
+.div-va{
+   width:30%w;
+   margin:0 auto;
+   height:200px;
+   border-radius:20px;
+   margin-top:200px;
+  }
+.div-v12{
+   width:96%;
+   height:200px;
+   background-color:#ffffff;
+   opacity:0.5;
+   position:absolute;
+   border-radius:20px;
+  }
+.div-v13{
+  position:absolute;
+  width:96%;
+  height:200px;
+  }
+.dic-img{
+  background-image:url("http://shp.qpic.cn/collector/3623241658/b1dc5dea-cd10-4c40-a654-835d98d4b374/0");
+  width:100px;
+  height:100px;
+  margin:0 auto;
+  background-size:100%;
+  border-radius:50px;
+  margin-top:50px;
+  }
+.div-img-pa{
+   width:100%;
+   text-align:center;
+  }
+.divtop-a{
+  width:100%;}
+  ul{
+   color:#ffb100;
+   }
+ 
+.sentence_div-a{
+  width:100%;
+  height:30px;
+  text-align:right;
+  }
+.sentence_div-a button{
+  background-color:#fffefe;
+  height:30px;
+  }
+.sentence_divb{
+  width:100%;
+  height:100%;
+  margin-top:10px;
+  }
+.sentence_data_a{
+  width:100%;
+  background-color:#ffffff;
+  opacity:0.4;
+  }
+.sentence_data_a p {
+   line-height:50px;
+   margin-left:10px;
+  }

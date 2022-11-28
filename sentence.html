@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>句子•收集</title>
+    <link rel="stylesheet" type="text/css" href="indexa.css">
+  </head>
+  <body>
+     <script src="ind.js"></script>	
+     <div class="sentence_div-a">
+      <button onclick="tianjua()">添加+</button>
+     </div>
+     <hr/>
+     <div class="sentence_divb" id="sentence_divb">
+     </div>
+      <script>
+       function zt(){
+       var body = document.getElementsByTagName("body")[0];
+       var spana= document.getElementsByTagName("span");
+          if(localStorage.getItem("cooking") != "#ebebe9"){
+             body.style.backgroundColor=localStorage.getItem("cooking");
+             document.getElementById("yejianmoshia").src="Metrial588.png";   
+             for(var k in spana){
+               spana[k].style.color="#ebebe9";
+             }
+          }else{
+             document.getElementById("yejianmoshia").src="Metrial587.png";
+             body.style.backgroundColor="#ebebe9";          
+             for(var k in spana){
+               spana[k].style.color="#040100";
+             }
+           
+          }
+      }
+     zt();
+      </script>
+  </body>
+</html>

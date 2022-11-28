@@ -28,6 +28,9 @@
       function zt(){
        var body = document.getElementsByTagName("body")[0];
        var spana= document.getElementsByTagName("span");
+           if(localStorage.getItem("cooking") == null){
+            localStorage.setItem("cooking","#ebebe9")
+          }
           if(localStorage.getItem("cooking") != "#ebebe9"){
              body.style.backgroundColor=localStorage.getItem("cooking");
              document.getElementById("yejianmoshia").src="Metrial588.png";   

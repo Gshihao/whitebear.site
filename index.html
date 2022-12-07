@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>欢迎光临</title>
+    <link rel="stylesheet" type="text/css" href="indexa.css">
+    <link rel="stylesheet" type="text/css" href="css/index-b.css">
+  </head>
+  <body id="divbody-sks">
+    <div class="divtop-a">
+       <span class="topavspan" onclick="tiaozhuan('sentence.html',this)">精选</span>
+       <span class="topavspan" onclick="tiaozhuan('newday.html',this)">每日</span>
+       <span class="topavspan" onclick="window.open('newday.html')">Java学习</span>
+       <span class="tuoal">
+           <img  id="yejianmoshia"class="topavspan-img" onclick="yejianmoshi()" src="Metrial588.png"/>
+           <img class="topavspan-img" onclick="xiala()" src="Metrial539.png"/>
+       </span>
+    </div>
+    <hr class="sjdksjksjssj"/>	
+	<div class="div-va">
+     <div class="div-v12"></div>
+     <div class="div-v13">
+      <div class="dic-img"></div>
+      <p class="div-img-pa">🇮 🇴 🇻 🇪 🇾 🇴 🇺</p>
+     </div>
+    </div>
+    
+    <div class="divtop-b">
+     <div class="divtop-b-a"></div>
+     <div class="divtop-b-b">
+      
+     </div>
+    </div>
+    
+    
+    <!-- 公告-->
+    <!-- 没有完善好，所以关闭-->
+    <div class="div-announcement-a" id="announcement-html">
+      <div class="div-announcement-v">
+        <span class="announcement-av">公告📣</span>
+        <hr/>
+        <span id="announcement-av-data" class="announcement-avdata">欢迎光临</span>
+        <div class="announcement-avbott">
+          <span onclick="shotannouncement()">朕已阅</span>
+        </div>
+      </div>
+    </div>
+    <script>
+       //判断主题
+       //字体放大
+      function shotannouncement(){
+       document.getElementById("announcement-html").style.display="none";
+      }
+      function tiaozhuan(tem,that,tim){
+         that.style.animation="";
+         setTimeout(function (){
+          window.open(tem)
+          that.style.animation="";
+         },0);
+       }
+      function zt(){
+       var body = document.getElementsByTagName("body")[0];
+       var spana= document.getElementsByTagName("span");
+          if(localStorage.getItem("cooking") == null){
+            localStorage.setItem("cooking","#ebebe9")
+          }
+          if(localStorage.getItem("cooking") != "#ebebe9"){
+             body.style.backgroundColor=localStorage.getItem("cooking");
+             document.getElementById("yejianmoshia").src="Metrial588.png";   
+             for(var k in spana){
+               spana[k].style.color="#ebebe9";
+             }
+          }else{
+             document.getElementById("yejianmoshia").src="Metrial587.png";
+             body.style.backgroundColor="#ebebe9";          
+             for(var k in spana){
+               spana[k].style.color="#040100";
+             }
+           
+          }
+      }
+     zt();
+    
+    </script>
+    <script src="ind.js"></script>
+    <style>
+    .shaoalert{width:96%;height:40px;position:absolute;
+      bottom:50px;}
+    .shaoalert-va{height:40px;background-color:#ffffff;border-radius:25px;
+      text-align:center;border:1px solid #100400;}
+    
+    .yejianmoshi{width:100%;height:100%;position:absolute;top:0px;opacity:0.5;
+      background-color:#020200;position:fixed;left:0px;}
+    .yejianmoshi-a{position:absolute;width:96.5%;height:100%;top:0px;text-align:center;position:fixed;
+      padding-top:70%;position:fixed;}
+    .yejianmoshi-a img{animation:6s qiehuan;width:200px;height:200px;}
+    @keyframes qiehuan{
+      0%{width:0px;height:0px;}
+      30%{width:200px;height:200px;}
+      100%{width:180px;height:180px;}
+      }
+    
+    .div-announcement-a{position:absolute;left:0px;position:fixed;
+      width:100%;height:100%;top:0px; ;;display:none;}
+    .div-announcement-v{width:90%;min-height:300px;;margin:0 auto;margin-top:50%;background-color:#fffdfd;border:0.5px solid #1c1c1c;
+      border-radius:30px;position:relative;text-align:center;}
+     /*Set the pop-up border*/
+    .announcement-av{display: inline-block;width:100%;text-align:center;margin-top:10px;font-size:30px;}
+    .announcement-avdata{display: inline-block;width:80%w;margin-top:100px;margin: 0 auto;}
+    .announcement-avbott{position:absolute;bottom:10px;right:20px;}
+    
+  </style>
+  </body>
+</html>

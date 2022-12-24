@@ -1,0 +1,51 @@
+*{
+  margin:0px;
+  padding:0px;
+  }
+body{
+  width:100%;
+  height:100%;
+  background:url("img/1.jpg")
+     no-repeat;
+  background-size:100%;
+  }
+/*加载动画栏*/
+.loading-diva{
+  position:absolute;
+  top:0px;
+  width:100%;
+  height:100%;
+  background-color:#fffcfd;
+  display:none;
+  /*关闭加载动画*/
+  }
+.loading-diva ul {
+  
+  }
+/*导航栏*/
+.nav-shift-av{
+   width:100%w;
+   text-align:right;
+   border-bottom:solid 1px #b3b1b1;
+  }
+.nav-shift-av h3 {
+  display:inline-block;
+  padding:5px;
+  font-weight:lighter;
+  font-size:17px;
+  }
+.nav-shift-av h3:hover{
+  
+  }
+/*后台管理接口*/
+.backstage-div-a{
+  width:70%;
+  height:200px;
+  background-color:#f2f2ed;
+  margin:0 auto;
+  margin-top:50%;
+  backdrop-filter: blur(90px);
+  border-radius:20px;
+  display:none;
+  //none 隐藏后台登录凭证
+  }

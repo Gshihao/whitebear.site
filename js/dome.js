@@ -13,8 +13,8 @@ function denglu(){
          if (ajax.readyState == 4 && ajax.status == 200) {
                var  poa= ajax.responseText;
                var obje=JSON.parse(poa);
+               alert(obje.result);
                if(obje.code ==200){
-                  alert(obje.result);
                   window.open("demo.html")
                   
                }

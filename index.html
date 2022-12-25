@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/index-shift.css">
+    <meta name="keywords" content="博客,SHAO">
+    <title>SHAO-首页-测试页-SHAO的学习笔记</title>
+  </head>
+  <body>
+     <!-- 顶部栏-->
+     <div class="nav-shift-av">
+        <h3 onclick="shalert(3000,'🌚还没有写，ok🐳')">工具</h3>
+        <h3 onclick="backstagedome()">注册/登录</h3>
+     </div>
+     <div class="body-diva" id="body-diva">
+       <div class="body-diva-head">
+         <!-- 头部，可留作-->
+       </div>
+       <div class="body-diva-bodya">
+        <!-- html注释-->
+        
+         <div class="body-diva-bodya-da" id="bodydivabodyada">
+           <!-- 父类布局-->
+           <!-- 里面用来放文章-->
+         </div>
+       </div>
+     </div>
+     
+     <!-- 后台管理系统-->	
+     <div class="backstage-div-a" id="backstagediva" style="display:none">
+       <div class="backstage-div-a-a">
+        <h3 onclick="guanbi()">×</h3>
+        <form >
+          <p>注册/登录</p><br>
+          <input type="text" id="fromuser" placeholder="请输入用户名" class=""/><br/>
+          <input type="password" placeholder="请输入用户密码" id="frompass" class=""/><br>
+          <span>注册</span><span style="margin-left:50px;" onclick="denglu()">登录</span>
+        </form>
+       </div>
+     </div>
+     <!--记载效果-->
+     <div class="loading-diva" id="loading-diva">
+     
+     </div>
+     <!--alert() SHAO-->
+     <div class="body-alert-aa" id="bodyalertaa" style="display:none;">
+       <h3 onclick="guanbib()">×</h3>
+       <p id="bodyalertaap"></p>
+     </div>
+     
+     <script src="js/dome.js"></script>
+     <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+     <script>
+      //记载博客文章
+      getboke()
+      window.onload=function (){
+        //页面加载完成 关闭加载效果
+        document.getElementById("loading-diva").style.display="none";
+        setTimeout(function (){
+          shalert(7000,"欢迎使用 地址为"+returnCitySN['cip']+"的用户,落日余晖，等你而归")
+        },1000);
+      }
+      //后台管理() backstagedome
+      function backstagedome(){
+         document.getElementById("backstagediva").style.display="";
+      }
+     </script>
+  </body>
+</html>

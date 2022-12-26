@@ -50,6 +50,7 @@ function shalert(tim,steraga){
        ajax.send("appId=2148&id=282");
        ajax.onreadystatechange = function () {
          if (ajax.readyState == 4 && ajax.status == 200) {
+             alert（）
                var poa= ajax.responseText;
                var obje=JSON.parse(poa);
                for(var i in obje.result){

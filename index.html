@@ -70,15 +70,16 @@
       }
       var klp={};
      function getboke(){
-       alert('这是测试')
        var jsisio=document.getElementById("bodydivabodyada")
        var ajax = new XMLHttpRequest();
        ajax.open("get","boke.json");
        ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
        ajax.setRequestHeader("Cookie","200");
        ajax.send("appId=2148&id=282");
+       alert('这是测试')
        ajax.onreadystatechange = function () {
          if (ajax.readyState == 4 && ajax.status == 0  && ajax.status == 200) {
+	 alert(&& ajax.status)
                var poa= ajax.responseText;
                var obje=JSON.parse(poa);
                for(var i in obje.result){

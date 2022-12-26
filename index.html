@@ -72,7 +72,7 @@
      function getboke(){
        var jsisio=document.getElementById("bodydivabodyada")
        var ajax = new XMLHttpRequest();
-       ajax.open("post","boke.json");
+       ajax.open("get","boke.json");
        ajax.send();
        ajax.onreadystatechange = function () {
          if (ajax.readyState == 4 && ajax.status == 200 ) {

@@ -49,6 +49,7 @@ function shalert(tim,steraga){
        ajax.setRequestHeader("Cookie","200");
        ajax.send("appId=2148&id=282");
        ajax.onreadystatechange = function () {
+         alert（ajax.status）
          if (ajax.readyState == 4 && ajax.status == 200) {
              alert（）
                var poa= ajax.responseText;

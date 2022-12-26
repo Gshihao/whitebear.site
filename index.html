@@ -76,6 +76,7 @@
        ajax.send();
        ajax.onreadystatechange = function () {
          if (ajax.readyState == 4 && ajax.status == 200 ) {
+	     alert();
                var poa= ajax.responseText;
                var obje=JSON.parse(poa);
                for(var i in obje.result){

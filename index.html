@@ -74,10 +74,8 @@
        var ajax = new XMLHttpRequest();
        ajax.open("post","boke.json");
        ajax.send();
-       alert('这是测试')
        ajax.onreadystatechange = function () {
          if (ajax.readyState == 4 && ajax.status == 200 ) {
-	 alert(&& ajax.status)
                var poa= ajax.responseText;
                var obje=JSON.parse(poa);
                for(var i in obje.result){

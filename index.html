@@ -73,9 +73,7 @@
        var jsisio=document.getElementById("bodydivabodyada")
        var ajax = new XMLHttpRequest();
        ajax.open("post","boke.json");
-       ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-       ajax.setRequestHeader("Cookie","200");
-       ajax.send("appId=2148&id=282");
+       ajax.send();
        alert('这是测试')
        ajax.onreadystatechange = function () {
          if (ajax.readyState == 4 && ajax.status == 200 ) {

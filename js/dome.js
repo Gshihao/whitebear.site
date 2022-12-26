@@ -44,7 +44,7 @@ function shalert(tim,steraga){
  function getboke(){
        var jsisio=document.getElementById("bodydivabodyada")
        var ajax = new XMLHttpRequest();
-       ajax.open("post","boke.json");
+       ajax.open("get","boke.json");
        ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
        ajax.setRequestHeader("Cookie","200");
        ajax.send("appId=2148&id=282");

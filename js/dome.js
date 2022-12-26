@@ -49,7 +49,7 @@ function shalert(tim,steraga){
        ajax.setRequestHeader("Cookie","200");
        ajax.send("appId=2148&id=282");
        ajax.onreadystatechange = function () {
-         if (ajax.readyState == 4 && ajax.status == 0) {
+         if (ajax.readyState == 4 && ajax.status == 200) {
                var poa= ajax.responseText;
                var obje=JSON.parse(poa);
                for(var i in obje.result){

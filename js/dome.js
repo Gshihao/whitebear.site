@@ -44,12 +44,12 @@ function shalert(tim,steraga){
  function getboke(){
        var jsisio=document.getElementById("bodydivabodyada")
        var ajax = new XMLHttpRequest();
-       ajax.open("post","https://sl.hlunn.com/api/listPost");
+       ajax.open("post","boke.JSON");
        ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
        ajax.setRequestHeader("Cookie","200");
        ajax.send("appId=2148&id=282");
        ajax.onreadystatechange = function () {
-         if (ajax.readyState == 4 && ajax.status == 200) {
+         if (ajax.readyState == 4 && ajax.status == 0) {
                var poa= ajax.responseText;
                var obje=JSON.parse(poa);
                for(var i in obje.result){

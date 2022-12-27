@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/lookbo.css">
+	<title></title>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+  </head>
+  <body>
+   <!-- 预留退出键-->
+   <a class="xiangmua" href=""></a>
+   <div class="body-bia">
+     <div class="body-bia-boda">
+     
+      <div class="body-bia-boda-hea">
+       <h1 id="h1title" ></h1>
+       <p id="nameas"></p>
+       <p id="datasize"></p>
+       <p id="timeas"></p>
+      </div>
+      <div class="body-bia-boda-boy" id="bodynamdat">
+        <!-- 里面放的是内容-->
+      </div>
+     </div>
+     <div class="body-bia-bodb">
+       <p>文章内容与网站无关</p>
+       <p>如章观点有误或错误可联系<a href="https://qm.qq.com/cgi-bin/qm/qr?k=oXynp5oJJrTLMq50MwR4xCwz4XbxiuHm&noverify=0&personal_qrcode_source=3">管理员</a>删除</p>
+       
+       <a href="#h1title">返回</a>
+     </div>
+   </div>
+   <script src="js/md.js"></script>	
+   <script>
+   window.onload=function (){
+    let thatsize= localStorage.getItem("username");
+    let kji=JSON.parse(localStorage.getItem('usernama'))[thatsize];
+    document.title="《"+kji.title+"》---"+kji.user;
+   
+    document.getElementById("h1title").innerText=kji.title;
+    document.getElementById("nameas").innerText="作者: "+kji.user;
+    document.getElementById("datasize").innerText="字数:"+kji.content.length+"字";
+    document.getElementById("timeas").innerText="投报时间: "+kji.postTime;
+    datalocal("bodynamdat",kji.content);
+    }
+  </script>
+  </body>
+</html>

@@ -50,7 +50,7 @@ var klp={};
        ajax.open("get","boke.json");
        ajax.send();
        ajax.onreadystatechange = function () {
-         if (ajax.readyState == 4 && ajax.status == 0 ) {
+         if (ajax.readyState == 4 && ajax.status == 200 ) {
                var poa= ajax.responseText;
                var obje=JSON.parse(poa);
                for(var i in obje.result){

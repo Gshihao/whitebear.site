@@ -1,0 +1,58 @@
+/*
+  @time:22/12/26
+  @name:白熊出品
+*/
+*{
+  margin:0px;
+  padding:0px;
+  }
+.xiangmua{
+  text-decoration:none;
+  background-image:url("");
+  }
+.body-bia{
+  width:100%;
+  }
+.body-bia-boda-hea h1{
+   text-align:center;
+   margin-top:100px;
+   font-family:微软雅黑;
+   margin-bottom:50px;
+  }
+/*css 时间/姓名*/
+.body-bia-boda-hea p{
+   font-size:13px;
+   text-indent:1em;
+   border-left:4px solid #050000;
+   margin:5px;
+  }
+#timeas{
+  border-bottom:1px dashed #050000;
+  }
+/*css 主体*/
+.body-bia-boda-boy{
+  margin:15px;
+  min-height:100px;
+  text-indent:2em;
+  font-family:宋体;
+  }
+.body-bia-bodb{
+   margin-top:40px;
+   border-top:1px dashed #050000;
+  }
+.body-bia-bodb p{
+  font-size:13px;
+  text-align:center;
+  margin:15px;
+  }
+.body-bia-boda-boy img {
+   width:100%;
+   margin:0 auto;
+   border-radius:10px;
+   margin-top:20px;
+  }
+.body-bia-boda-boy li {
+  font-size:15px;
+  margin-left:15px;
+  margin-top:15px;
+  }

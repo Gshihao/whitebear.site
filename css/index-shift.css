@@ -11,7 +11,7 @@ body{
   background:url(../img/1.jpg)
   no-repeat;
     background-size:100%;
-    background-color:#f5f5f4;
+    background-color:#ededed;
   }
   /*加载动画栏*/
   .loading-diva{

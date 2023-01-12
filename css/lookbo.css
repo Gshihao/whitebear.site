@@ -1,0 +1,171 @@
+/*
+  @time:22/12/26
+  @name:白熊出品
+*/
+*{
+  margin:0px;
+  padding:0px;
+  }
+body{
+  background-color:#fcfcfc;
+  }
+.xiangmua{
+  text-decoration:none;
+  background-image:url("");
+  }
+.body-bia{
+  width:100%;
+  }
+.body-bia-boda-hea h1{
+   text-align:center;
+   margin-top:100px;
+   font-family:微软雅黑;
+   margin-bottom:50px;
+  }
+/*css 时间/姓名*/
+.body-bia-boda-hea p{
+   font-size:13px;
+   text-indent:1em;
+   border-left:4px solid #050000;
+   margin:5px;
+  }
+#timeas{
+  border-bottom:1px dashed #050000;
+  }
+/*css 主体*/
+.body-bia-boda-boy{
+  margin:15px;
+  min-height:100px;
+  text-indent:2em;
+  font-family:宋体;
+  line-height:30px;
+  }
+.body-bia-bodb{
+   margin-top:40px;
+   border-top:1px dashed #050000;
+  }
+.body-bia-bodb p{
+  font-size:13px;
+  text-align:center;
+  margin:15px;
+  
+  }
+/*图片*/
+.body-bia-boda-boy img {
+   width:100%;
+   margin:0 auto;
+   border-radius:10px;
+   margin-top:20px;
+  }
+/*一些列表*/
+.body-bia-boda-boy li {
+  font-size:15px;
+  margin-left:15px;
+  margin-top:15px;
+  }
+.body-bia-boda-boy p{
+  text-indent:2em;
+  }
+/*css 动态动画栏*/
+.jiazailandonghua{
+  position:fixed;
+  top:0px;
+  width:100%;
+  height:5px;
+  background-color:;
+  }
+.jiazailandonghua .jiazailandonghuaa{
+  width:0px;
+   height:6px;
+   background-color:#878500;
+  }
+.fanhuijiamanniu{
+   position:fixed;
+   bottom:20px;
+   right:20px;
+   width:30px;
+   height:30px;
+   display:none;
+  }
+/*导航栏*/
+.newDaohangln-div{
+  max-width:100%;
+  min-height:40px;
+  background-color:#e8e8e8;
+  /*导航栏背景颜色*/
+  padding:5px;
+  }
+
+.newDaohangln-div-hed{
+  height:40px;
+  }
+.newDaohanglndivhed h3{
+  display:inline-block;
+  line-height:40px;
+  text-indent:1em;
+  }
+.newDaohanglndivhed-div{
+  display:inline-block;
+  float:right;
+  high:40px;
+  text-align:center;
+  width:40px;
+  margin-right:10px;
+  margin-top:5px;
+  }
+.newDaohanglndivhed-div span{
+   display:block;
+   border:2px solid black;
+   width:27px;
+   margin-top:5px;
+  }
+#newRawthree{
+   margin-top:10px;
+  }
+/*css span标签旋转动画 aa1-aa4*/
+@keyframes aa1{
+  to{
+    transform: rotate(27deg);
+    transform-origin: left bottom;
+    }
+  }
+@keyframes aa2{
+  to{
+    transform: rotate(-27deg);
+    transform-origin: left bottom;
+    }
+  }
+@keyframes aa3{
+  to{
+    transform: rotate(0deg);
+    transform-origin: left bottom;
+    }
+  }
+@keyframes aa4{
+  to{
+     transform: rotate(0deg);
+         transform-origin: left top;
+    }
+  }
+/*css 下滑栏内容*/
+.newDaohangln-div-body{
+  display:none;
+  }
+/*css 一级标题的icon图标*/
+.newDaohangln-div-bodya111vimg{
+   width:30px;
+   hight:30px;
+   
+  }
+.newDaohangln-div-bodya11v{
+   max-width:100%;
+   margin:5px;
+   background-color:#ffffff;
+  }
+.newDaohangln-div-bodya11v p{
+   text-indent:5em;
+   line-height:30px;
+   font-size:14px;
+   display:inline;
+   margin-left:2em;
+  }

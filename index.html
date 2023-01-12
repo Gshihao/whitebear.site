@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/index-shift.css">
+    <meta name="keywords" content="博客,SHAO">
+    <meta name="baidu-site-verification" content="code-BGEyMce45T" />
+    <title>SHAO-首页-测试页-SHAO的学习笔记</title>
+  </head>
+  <body>
+     <!-- 顶部栏-->
+      <div class="newDaohangln-div">
+     <div class="newDaohanglndivhed">
+       <h3>SHAO SHARE</h3>
+       <div class="newDaohanglndivhed-div" onclick="opennew()">
+         <span id="newRawone"> </span>
+         <span id="newRawthree"> </span>
+       </div>
+     </div>
+     <!-- 下滑栏内容-->
+     <div class="newDaohangln-div-body" id="newDaohanglndivbody">
+     
+     <!-- 这是一块内容-->
+       <div class="newDaohangln-div-bodya11v">
+        <div class="newDaohangln-div-bodya111v">
+          <!-- 一级下滑栏-->
+          <div class="newDaohangln-div-bodya111vimg" style="background:url(img/1.jpg);"></div>
+          <p onclick="window.open('index.html');">首页</p>
+        </div>
+        <div class="newDaohangln-div-bodya112v">
+         <!-- 用来放二级标题内容-->
+        </div>
+       </div>
+       
+        <div class="newDaohangln-div-bodya11v">
+        <div class="newDaohangln-div-bodya111v">
+          <!-- 一级下滑栏-->
+          <div class="newDaohangln-div-bodya111vimg" style="background:url(img/1.jpg);"></div>
+          <p onclick="opennew();opengongju()">工具</p>
+        </div>
+        <div class="newDaohangln-div-bodya112v">
+         <!-- 用来放二级标题内容-->
+        </div>
+       </div>
+       <!-- 这是一块内容-->
+       <div class="newDaohangln-div-bodya11v">
+        <div class="newDaohangln-div-bodya111v">
+          <!-- 一级下滑栏-->
+          <div class="newDaohangln-div-bodya111vimg" style="background:url(img/1.jpg);"></div>
+          <p onclick="opennew();backstagedome();">注册/登录</p>
+        </div>
+        <div class="newDaohangln-div-bodya112v">
+         <!-- 用来放二级标题内容-->
+        </div>
+       </div>
+     
+     </div>
+     <!-- 以上是new导航栏-->
+   </div>
+     <div class="body-diva" id="body-diva">
+       <div class="body-diva-head">
+         <!-- 头部，可留作-->
+         <div class="body-diva-head_av">
+          <img src="img/1.jpg"/>
+         </div>
+       </div>
+       <div class="body-diva-bodya">
+        <!-- html注释-->
+        <a href=""></a>
+         <div class="body-diva-bodya-da" id="bodydivabodyada">
+           <br>
+           <!-- 父类布局-->
+           <!-- 里面用来放文章-->
+         </div>
+       </div>
+     </div>
+     
+     <!-- 后台管理系统-->	
+     <div class="backstage-div-a" id="backstagediva" style="display:none">
+       <div class="backstage-div-a-a">
+        <h3 onclick="guanbi()">×</h3>
+        <form >
+          <p>注册/登录</p><br>
+          <input type="text" id="fromuser" placeholder="请输入用户名" class=""/><br/>
+          <input type="password" placeholder="请输入用户密码" id="frompass" class=""/><br>
+          <span>注册</span><span style="margin-left:50px;" onclick="denglu()">登录</span>
+        </form>
+       </div>
+     </div>
+     <!--记载效果-->
+     <div class="loading-diva" id="loading-diva">
+     
+     </div>
+     <!--alert() SHAO-->
+     <div class="body-alert-aa" id="bodyalertaa" style="display:none;">
+       <h3 onclick="guanbib()">×</h3>
+       <p id="bodyalertaap"></p>
+     </div>
+     <!-- 工具栏-->
+     <div class="body-sygojgjy-ba" id="bodysygojgjyba" style="display:none">
+       <div class="bidgajshgd-background-a">
+       <h2 onclick="guanbigongju()"> ×</h2>
+       
+        <div class="gongjulam-a">
+          <h3>实用类:</h3>
+          <div onclick="gongneng()">现在时间</div>
+          <div>QQ号</div>
+          <div>资源分享</div>
+          <div>拾色器</div>
+        </div>
+       </div>
+     </div>
+     <script src="js/dome.js"></script>
+     <script>
+      //记载博客文章
+      getboke()
+      window.onload=function (){
+        //页面加载完成 关闭加载效果
+        document.getElementById("loading-diva").style.display="none";
+        let dh=sessionStorage.getItem("key")
+        if(dh==null){
+          setTimeout(function (){
+          shalert(7000,"欢迎光临\n落日余晖，等你而归")
+          },1000);
+         sessionStorage.setItem("key","aa");
+        }
+      }
+      //后台管理() backstagedome
+      function backstagedome(){
+         document.getElementById("backstagediva").style.display="block";
+      }
+      function chakanboke(that){
+       var id=klp[that.outerHTML.split('" onclick="chakanboke(this)"')[0].split('name="')[1]].id;
+       window.open("lookboke.html?id="+id)
+      }
+       let coor=0;
+     function opennew(){
+         //刷新span图标状态 0 为第一次点击
+         if(coor == 0){
+           document.getElementById("newRawone").style.animation="aa1 0.5s forwards";
+           document.getElementById("newRawthree").style.animation="aa2 0.5s forwards";
+           document.getElementById("newDaohanglndivbody").style.display="block";
+           coor=1;
+         }else{
+             document.getElementById("newRawone").style.animation="aa3 0.5s forwards";
+             document.getElementById("newRawthree").style.animation="aa4 0.5s forwards";
+             document.getElementById("newDaohanglndivbody").style.display="none";
+           coor=0;
+         }
+      }
+     </script>
+  </body>
+</html>

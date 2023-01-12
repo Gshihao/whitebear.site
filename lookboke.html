@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/lookbo.css">
+	<title></title>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+  </head>
+  <body>
+   <!-- 预留退出键-->
+   <a class="xiangmua" href=""></a>
+   <div class="jiazailandonghua">
+     <div class="jiazailandonghuaa" id="jiazailandonghuaa"></div>
+   </div>
+   <div class="body-bia">
+     <div class="body-bia-boda">
+     
+     
+      <div class="body-bia-boda-hea">
+       <h1 id="h1title" >获取中</h1>
+       <p id="nameas">获取中</p>
+       <p id="datasize">获取中</p>
+       <p id="timeas">获取中</p>
+      </div>
+      <div class="body-bia-boda-boy" id="bodynamdat">
+        <!-- 里面放的是内容-->
+        获取中
+      </div>
+     </div>
+     <div class="body-bia-bodb">
+       <p>文章内容与网站无关</p>
+       <p>如章观点有误或错误可联系<a href="https://qm.qq.com/cgi-bin/qm/qr?k=oXynp5oJJrTLMq50MwR4xCwz4XbxiuHm&noverify=0&personal_qrcode_source=3">管理员</a>删除</p>
+       <div id="fanhuijiamanniu" class="fanhuijiamanniu" style=""><div onclick="tiaozhiampinhjixkdk()" style="background:url(img/KEt1UKmNfr0AAAAASUVORK5CYII=.png);background-size:100%;width:30px;height:30px;"></div></div>
+     </div>
+   </div>
+   <script src="js/md.js"></script>	
+   <script>
+    var sHref = window.location.href;
+    var shspaid = sHref.split("?")[1].split("=")[1];
+    var ajax = new XMLHttpRequest();
+     ajax.open("get","boke.json");
+     ajax.send();
+     ajax.onreadystatechange = function () {
+       if (ajax.readyState == 4 && ajax.status == 0|200 ) {
+         var poa= ajax.responseText;
+         var obje=JSON.parse(poa);
+           for(var i in obje.result){
+             //判断id
+              var kji=obje.result[i];
+              if(shspaid == kji.id){
+                 document.title="《"+kji.title+"》---"+kji.user;
+                 document.getElementById("h1title").innerText=kji.title;
+                 document.getElementById("nameas").innerText="作者: "+kji.user;
+                 document.getElementById("datasize").innerText="字数:"+kji.content.length+"字";
+                 document.getElementById("timeas").innerText="投报时间: "+kji.postTime;
+                 datalocal("bodynamdat",kji.content);
+              }
+           }
+        }
+      }
+      let clientHeight=document.body.clientHeight;
+        window.onscroll = function() {fougetscrollHeight()};
+        function fougetscrollHeight(){
+           //获取body整体高度
+          let scrollHeight=document.body.scrollHeight;
+          let keshi=document.documentElement.clientHeight
+          let scrollTop=document.body.scrollTop;
+          let shujua=scrollTop/(scrollHeight-keshi)*100+"%";
+          document.getElementById("jiazailandonghuaa").style.width=shujua;
+          if(scrollTop > 50){
+            document.getElementById("fanhuijiamanniu").style.display="block";
+          }
+          if(scrollTop < 50){
+            document.getElementById("fanhuijiamanniu").style.display="none";
+          }
+        }
+      function tiaozhiampinhjixkdk(){
+         document.body.scrollTop = 0;
+         document.documentElement.scrollTop = 0;
+      }
+  </script>
+  </body>
+</html>

@@ -74,7 +74,7 @@
    </div>
    <script src="js/md.js"></script>	
    <script>
-    var ifyour;
+    var ifyour = false;
     var sHref = window.location.href;
     var shspaid = sHref.split("?")[1].split("=")[1];
     var ajax = new XMLHttpRequest();
@@ -98,7 +98,7 @@
                  datalocal("bodynamdat",kji.content);
               }
            }
-          if(shspaid == false){
+          if(ifyour == false){
             //当id为空值，则跳转403页面
              window.open("webA/403.html")
           }

@@ -256,11 +256,12 @@ body{
     }
   .body-diva-head_av{
     width:340px;
-    margin:auto;
-    /*此处在pc端需设置网页居中*/
+    /*此处在pc端需设置网页居中 已解决*/
+    left:50%;
     position:relative;
     background-size:100%;
     margin:10px;
+    margin-left:-170px;
     margin-bottom:-5px;
     overflow:hidden;
    }

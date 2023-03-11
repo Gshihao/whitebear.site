@@ -177,7 +177,8 @@ body {
 
 .body-diva-bodya-daa:hover {
   /*栏目点击效果*/
-  box-shadow: 6px 6px 10px rgba(0, 0, 0, .3) inset
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, .3) ;
+  /* inset  设置内外阴影 */
 }
 
 .cladjhdhdhs {

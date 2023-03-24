@@ -168,7 +168,7 @@
       document.getElementById("backstagediva").style.display = "block";
     }
     function chakanboke(that) {
-      var id = klp[that.outerHTML.split('" onclick="chakanboke(this)"')[0].split('name="')[1]].id;
+      var id = that.outerHTML.split('" onclick="chakanboke(this)"')[0].split('name="')[1];
       window.open("lookboke.html?id=" + id)
     }
     let coor = 0;

@@ -55,8 +55,17 @@ function shalert(tim, steraga) {
     }, 1000);
   }, tim);
 }
-
-var klp = {};
+function  timestampToTime(timestamp) {
+  timestamp = timestamp ? timestamp : null;
+  let date = new Date(timestamp);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+  let Y = date.getFullYear() + '-';
+  let M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+  let D = (date.getDate() < 10 ? '0' + date.getDate() : date.getDate()) + ' ';
+  let h = (date.getHours() < 10 ? '0' + date.getHours() : date.getHours()) + ':';
+  let m = (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()) + ':';
+  let s = date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds();
+  return Y + M + D + h + m + s;
+}
 function getboke() {
   var jsisio = document.getElementById("bodydivabodyada")
   var ajax = new XMLHttpRequest();
@@ -66,19 +75,26 @@ function getboke() {
     if (ajax.readyState == 4 && ajax.status == 0 | 200) {
       var poa = ajax.responseText;
       var obje = JSON.parse(poa);
-      for (var i in obje.result) {
-        var ji = "";
-        klp[i] = obje.result[i]
-        for (var j = 0; j < obje.result[i].content.length; j++) {
-          ji += obje.result[i].content[j]
-        }
-        ji = ji.replace(/<[^>]+>/g, "");
-        var kia = '<div class="body-diva-bodya-daa" id="bodydivabodyadaa" name="' + i + '" onclick="chakanboke(this)"><h3>' + obje.result[i].title + '</h3>';
-        var kib = '<div class="diso"><h4>(来源于本站 "' + obje.result[i].user + '"的选文)</h4><p class="ksjsjdjxnxnncjd">' + ji + '</p></div><time>' + obje.result[i].postTime + '</time></div>';
+
+      for (var i in obje[2]) {
+        // var ji = "";
+        // klp[i] = obje.result[i]
+        // for (var j = 0; j < obje.result[i].content.length; j++) {
+        //   ji += obje.result[i].content[j]
+        // }
+        // ji = ji.replace(/<[^>]+>/g, "");
+        /*
+         * i:顺序
+           til.split(".")[0] 名字
+         */
+        var til=obje[2][i].tl;
+        var kia = '<div class="body-diva-bodya-daa" id="bodydivabodyadaa" name="' +  obje[2][i].pp.spaceused + '" onclick="chakanboke(this)"><h3>' + til.split(".")[0]+ '</h3>';
+        var kib = '<div class="diso"><h4>(来源于本站 "' +"SHAO"+ '"的选文)</h4><p class="ksjsjdjxnxnncjd">' + obje[2][i].pp.dg + '</p></div><time>' + timestampToTime(obje[2][i].mt) + '</time></div>';
         lkj = kia + kib;
         jsisio.innerHTML += lkj;
         ji = "";
       }
+
     }
   }
 }

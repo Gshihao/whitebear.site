@@ -81,7 +81,16 @@
   </div>
   <script src="js/md.js"></script>
   <script>
-
+    function timestampToTime(timestamp) {
+      var date = new Date(timestamp * 1000);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+      var Y = date.getFullYear() + '-';
+      var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+      var D = date.getDate() + ' ';
+      var h = date.getHours() + ':';
+      var m = date.getMinutes() + ':';
+      var s = date.getSeconds();
+      return Y + M + D + h + m + s;
+    }
     var ifyour = false;
     var sHref = window.location.href;
     var shspaid = sHref.split("?")[1].split("=")[1];
@@ -102,10 +111,10 @@
             document.getElementById("h1title").innerText = kji.tl.split(".")[0];
             document.getElementById("nameas").innerText = "作者: " + "SHAO helloWorld";
             document.getElementById("datasize").innerText = "字数:" + kji.pp.dg.length + "字";
-            document.getElementById("timeas").innerText = "投报时间: " + kji.mt;
+            document.getElementById("timeas").innerText = "投报时间: " +timestampToTime(kji.mt);
             datalocal("bodynamdat", kji.pp.dg);
           }
-        
+
         }
         if (ifyour == false) {
           //当id为空值，则跳转403页面

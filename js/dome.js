@@ -88,7 +88,7 @@ function getboke() {
          */
         var til=obje[2][i].tl;
         var kia = '<div class="body-diva-bodya-daa" id="bodydivabodyadaa" name="' +  obje[2][i].pp.spaceused + '" onclick="chakanboke(this)"><h3>' + til.split(".")[0]+ '</h3>';
-        var kib = '<div class="diso"><h4>(来源于本站 "' +"SHAO"+ '"的选文)</h4><p class="ksjsjdjxnxnncjd">' + obje[2][i].pp.dg + '</p></div><time>' + timestampToTime(obje[2][i].mt) + '</time></div>';
+        var kib = '<div class="diso"><h4>(来源于本站 "' +"SHAO"+ '"的选文)</h4><p class="ksjsjdjxnxnncjd">' + obje[2][i].pp.dgsa + '</p></div><time>' + timestampToTime(obje[2][i].mt) + '</time></div>';
         lkj = kia + kib;
         jsisio.innerHTML += lkj;
         ji = "";

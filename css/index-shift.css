@@ -15,7 +15,6 @@ body {
   background-size: 100%;
   background-color: #ededed;
 }
-
 /*加载动画栏*/
 .loading-diva {
   position: absolute;
@@ -169,7 +168,7 @@ body {
   margin-right: 10px;
   /*添加阴影效果*/
   box-shadow: 3px 3px 10px rgba(0, 0, 0, .3);
-   /* 此处背景未设置，
+  /* 此处背景未设置，
    背景路径 banchjsdh.png
    不知道为啥显示不 */
   /* background: url("img/1.jpg"); */
@@ -177,7 +176,7 @@ body {
 
 .body-diva-bodya-daa:hover {
   /*栏目点击效果*/
-  box-shadow: 6px 6px 10px rgba(0, 0, 0, .3) ;
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, .3);
   /* inset  设置内外阴影 */
 }
 
@@ -290,8 +289,9 @@ body {
 
 .gongjulam-a {
   width: 100%;
-  overflow:hidden;
+  overflow: hidden;
 }
+
 .gongjulam-a h3 {
   margin-left: 10px;
   margin-top: 20px;
@@ -305,9 +305,10 @@ body {
   border-radius: 5px;
   display: inline-block;
 }
+
 .body-diva-head_av {
   width: 340px;
-   /* min-width: 340px; */
+  /* min-width: 340px; */
   /*此处在pc端需设置网页居中 已解决*/
   left: 50%;
   position: relative;
@@ -467,4 +468,18 @@ body {
 .buttomAsd {
   width: 100％;
   padding: 10px;
+}
+.body_difdif-abquabyu{
+  width: 100%w;
+  margin: 0;
+  background-color: #ededed;
+  box-shadow: none;
+  text-align: center;
+  margin-top: 50px;
+}
+.wangzhanjieshadgffo{
+  text-align: center;
+}
+.wangzhanjieshadgffo span {
+  margin: 5px;
 }

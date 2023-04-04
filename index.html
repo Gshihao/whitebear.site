@@ -130,7 +130,9 @@
         <!-- <h4>本站运行时间：</h4> -->
         <span id="qnquanshujua"></span>
       </p>
-      <p><a href="https://qm.qq.com/cgi-bin/qm/qr?k=CyjdXdpctCMBtOvzkE-Ruwjps90vNAaz&noverify=0&personal_qrcode_source=3">QQ</a></p>
+      <p><a
+          href="https://qm.qq.com/cgi-bin/qm/qr?k=CyjdXdpctCMBtOvzkE-Ruwjps90vNAaz&noverify=0&personal_qrcode_source=3">QQ</a>
+      </p>
     </div>
   </div>
   <!-- 后台管理系统-->
@@ -257,7 +259,7 @@
       }, 6000);
     }
     // 轮播图宽度自适应
-    // let lunbitu =document.body.clientWidth;
+    // 
     // setmaixjfif(lunbitu-180);
     // function setmaixjfif(mac){
     //   document.getElementById("sfjsklakkbabja").style.width=mac+"px";
@@ -267,6 +269,27 @@
     //     rty[i].style.width=mac+"px";
     //   }
     // }
+    // 
+    let lunbitu = document.body.clientWidth;
+    // 首次进入网站时
+    setfu(lunbitu);
+    function setfu(lwn) {
+      // 两边的间距
+      if(lwn >=1038){
+          lwn=1000;
+      }else{
+        lwn=lwn-38; 
+      }
+      var iop=document.getElementsByClassName("mkoijnuhb");
+      document.getElementById("sfjsklakkbabja").style.width=lwn+"px";
+      document.getElementById("bodyivaeadf").style.width=lwn+"px"; 
+      document.getElementById("bodyivaeadf").style.transition="0.8s";
+      document.getElementById("sfjsklakkbabja").style.marginLeft="-"+lwn/2+"px";
+      // 动态设置宽高
+       for(var i =0;i<iop.length;i++){
+        iop[i].style.width=lwn+"px";
+       }
+    }
     // 运行时间
     gettime();
     function gettime() {

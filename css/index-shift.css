@@ -475,11 +475,15 @@ body {
   background-color: #ededed;
   box-shadow: none;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 30px;
+  border-radius: 0px;
 }
 .wangzhanjieshadgffo{
   text-align: center;
 }
 .wangzhanjieshadgffo span {
   margin: 5px;
+}
+.body_difdif-abquabyu:hover{
+  box-shadow: none;
 }

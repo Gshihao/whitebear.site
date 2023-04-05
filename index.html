@@ -119,19 +119,18 @@
     <div class="wangzhanjieshadgffo">
       <p>
         <span>@2022-2023</span>
-        <span>SHAO</span>
+        <span><a href="https://qm.qq.com/cgi-bin/qm/qr?k=CyjdXdpctCMBtOvzkE-Ruwjps90vNAaz&noverify=0&personal_qrcode_source=3">SHAO</a></span>
       </p>
       <p>
         <span>中国-山东</span>
-        <span>请求次数：**</span>
-        <span>内存占用：00mb</span>
+        <span id="yemiamqingwqiu"></span>  <!-- 页面请求次数 -->
+        <span id="neicun"></span> <!-- 内存使用 -->
       </p>
       <p>
         <!-- <h4>本站运行时间：</h4> -->
         <span id="qnquanshujua"></span>
       </p>
-      <p><a
-          href="https://qm.qq.com/cgi-bin/qm/qr?k=CyjdXdpctCMBtOvzkE-Ruwjps90vNAaz&noverify=0&personal_qrcode_source=3">QQ</a>
+      <p>
       </p>
     </div>
   </div>
@@ -275,34 +274,52 @@
     setfu(lunbitu);
     function setfu(lwn) {
       // 两边的间距
-      if(lwn >=1038){
-          lwn=1000;
-      }else{
-        lwn=lwn-38; 
+      if (lwn >= 1038) {
+        lwn = 1000;
+      } else {
+        lwn = lwn - 29;
       }
-      var iop=document.getElementsByClassName("mkoijnuhb");
-      document.getElementById("sfjsklakkbabja").style.width=lwn+"px";
-      document.getElementById("bodyivaeadf").style.width=lwn+"px"; 
-      document.getElementById("bodyivaeadf").style.transition="0.8s";
-      document.getElementById("sfjsklakkbabja").style.marginLeft="-"+lwn/2+"px";
+      var iop = document.getElementsByClassName("mkoijnuhb");
+      document.getElementById("sfjsklakkbabja").style.width = lwn + "px";
+      document.getElementById("bodyivaeadf").style.width = lwn + "px";
+      document.getElementById("bodyivaeadf").style.transition = "0.8s";
+      document.getElementById("sfjsklakkbabja").style.marginLeft = "-" + lwn / 2 + "px";
       // 动态设置宽高
-       for(var i =0;i<iop.length;i++){
-        iop[i].style.width=lwn+"px";
-       }
+      for (var i = 0; i < iop.length; i++) {
+        iop[i].style.width = lwn + "px";
+      }
     }
     // 运行时间
+    //用来监听网页的请求
+    var jiantinglen=0;
+    Object.defineProperty(XMLHttpRequest.prototype, "status", {
+      get: function (status) {
+        jiantinglen++;
+      }
+    })
     gettime();
     function gettime() {
       var yimra = document.getElementById("qnquanshujua");
       setInterval(function () {
         // 网站开始的是大概时间
         // Date.now("2022-10-24 00:00:00");
-        var t = new Date("2022-10-24 00:00:00");
+        var i = new Date("2022-10-24 00:00:00");
+        var t = new Date();
+        var io = t.getTime() - i.getTime();
         //  yimra.innerText="运行"+t.getFullYear()+"年"+t.getHours()+"月"+t.getDate()+"日"+t.getDay()+"时"+t.getMinutes()+"分"+t.getSeconds()+"秒";
-        yimra.innerText = "已运行" + Date.now("2022-10-24 00:00:00");
+        yimra.innerText = "已运行" + Math.floor((io) / (86400000)) + "天"
+          + Math.floor((io % 86400000) / 3600000) + "个小时" +
+          Math.floor((io % 3600000) / 60000) + "分钟";
+        // +Math.floor((io % 60000) / 1000)+"秒";
         if (false) { return; }
-      }, 600)
-    }  
+
+        // neicun
+        var localp = window.performance.memory.totalJSHeapSize / 1024 / 1024;
+
+        document.getElementById("neicun").innerText = "内存使用 " + localp.toFixed(2);
+        document.getElementById("yemiamqingwqiu").innerText="请求："+jiantinglen;
+      }, 300)
+    } 
   </script>
 </body>
 

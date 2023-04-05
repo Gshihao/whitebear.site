@@ -128,7 +128,9 @@ body {
   border-radius: 5px;
   box-shadow: 10px 10px 7px rgba(0, 0, 0, .3);
 }
-
+.body-alert-aa h3{
+  cursor: pointer;
+}
 .body-alert-aa h3 {
   float: right;
   margin-right: 5px;
@@ -254,7 +256,9 @@ body {
   position: absolute;
   top: 0%;
 }
-
+.body-sygojgjy-ba div{
+  cursor: pointer;
+}
 .bidgajshgd-background-a {
   width: 90%;
   min-height: 80px;
@@ -442,7 +446,10 @@ body {
   height: 0px;
   display: none;
 }
+.newDaohangln-div-body p{
+  cursor: pointer;
 
+}
 /*css 一级标题的icon图标*/
 .newDaohangln-div-bodya111vimg {
   width: 30px;

@@ -1,0 +1,32 @@
+body{
+    background-color: #efe0d3dc;
+    /* 网页背景颜色 */
+}
+.gongyou{
+    /* G共有参数 */
+    height: 200px;
+    margin: 5PX;
+    border-radius: 15px;
+    background-color: #fff; 
+    /* 板块背景颜色 */
+}
+body .wangzhanjieshao{
+    /* 网站介绍 */
+    float: left;
+    width: 60%;
+    margin: 5PX;
+}
+body .gerenjirdhso{
+    /* 个人介绍 */
+    width: 30%;
+    float: right;
+}
+.wangzhanjieshao .iopyu{
+    background-color: #fff; 
+    padding: 1px;
+    border-radius: 15px;
+    margin-bottom: 5px;
+}
+.wangzhanjieshao p{
+    text-indent: 2em;
+}

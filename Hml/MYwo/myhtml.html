@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="" id="cssda">
+    <title>introduce--郭世豪</title>
+</head>
+
+<body>
+    <div class="androidasdfa1" style="display: none;" id="androidasdfa1">
+        <!-- 手机接界面个人介绍 -->
+        <div class="ia">
+            <div class="myco">
+                <img src="Myphonte.jpg" alt="" class="imgANDroid" id="imgANDroid">
+                <p>introduce--郭世豪</p>
+                <p id="mrtext" class="mrtext">心平能愈三千疾，心静可通万事理，鸟不跟鱼比游泳，鱼不跟鸟比飞翔，你我  ，各有所长</p>
+                <audio id="Ansroidmp3" autoplay="autoplay"  src="http://dl.stream.qqmusic.qq.com/C400003Lqwv03ZYLiT.m4a?guid=1362177986&vkey=55FDBE9BF5E3E28EFBDD3E341883A0059F3B5730153697066A8B8AC6E0981FF3D14C39075DBBF0EC8C5D5233E632E753E6640D1346FA8CBE&uin=&fromtag=120032"></audio>
+                <button onclick="window.history.go(-1);">&lt; 返回首页</button>
+            </div>
+        </div>
+        <div></div>
+    </div>
+    <div class="pcasdfa1" style="display:none;" id="pcasdfa1">
+        <!-- 电脑版个人介绍 -->
+        <div></div>
+        <div></div>
+    </div>
+    <script src="ifpc.js"></script>
+    <script>
+        var linka=document.getElementById("cssda");
+        if (!browser.versions.mobile || browser.versions.iPad) {
+            //  当界面为pc端时
+            linka.href="css/Android.css";
+            document.getElementById("androidasdfa1").style.display="none";
+            setTimeout(function (){
+                document.getElementById("pcasdfa1").style.display="block";
+            },600)
+        }else{
+            linka.href="css/Android.css";
+            setTimeout(function(){
+                document.getElementById("androidasdfa1").style.display="block";
+            },600)
+            document.getElementById("pcasdfa1").style.display="";
+        }
+    </script>
+</body>
+
+</html>

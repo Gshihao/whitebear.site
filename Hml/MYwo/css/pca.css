@@ -4,7 +4,7 @@ body{
 }
 .gongyou{
     /* G共有参数 */
-    height: 200px;
+    height:auto;
     margin: 5PX;
     border-radius: 15px;
     background-color: #fff; 
@@ -18,7 +18,7 @@ body .wangzhanjieshao{
 }
 body .gerenjirdhso{
     /* 个人介绍 */
-    width: 30%;
+    width: 36%;
     float: right;
 }
 .wangzhanjieshao .iopyu{
@@ -29,4 +29,51 @@ body .gerenjirdhso{
 }
 .wangzhanjieshao p{
     text-indent: 2em;
+}
+.wangzhanjieshao span{
+    font-size: 11px;
+}
+.iopyu .p1{
+    margin: 30px;
+}
+
+@keyframes identifiersdsf {
+    0%{}
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.gerenjirdhso img{
+    border-radius: 50%;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+}
+.igasd {
+    /* 存放投降的容器 */
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    animation: identifiersdsf 9s linear infinite;
+}
+.ioplk{
+    width: 100%;
+    text-align: center;
+}
+.opkl{
+    font-size:10px;
+}
+.ifmasd{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 80px;
+}
+.uiop a img{
+    width: 50px;
+    height: 100%;
+    margin: 10px;
+}
+.grtrncuoepi{
+ margin-top: 10px;   
 }

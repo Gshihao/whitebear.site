@@ -2,7 +2,6 @@
     width: 100%;
     text-align: center;
 }
-
 .myco img {
     width: 200px;
     height: 200px;
@@ -47,4 +46,34 @@ audio {
     background-color: #fff;
     text-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
     margin-top: 50%;
+}
+
+
+
+
+
+
+/* 测试届满前 */
+.androidasdfa1{
+
+}
+.contea{
+    scroll-snap-type: y mandatory;
+}
+.uio{
+    scroll-snap-align: start;
+}
+.cla{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+}
+.onea{
+    background-color: antiquewhite;
+}
+.twoa{
+    background-color: rgb(17, 134, 32);
+}
+.threeea{
+    background-color: blue;
 }

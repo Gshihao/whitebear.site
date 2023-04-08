@@ -18,7 +18,7 @@ body .wangzhanjieshao{
 }
 body .gerenjirdhso{
     /* 个人介绍 */
-    width: 36%;
+    width: 34%;
     float: right;
 }
 .wangzhanjieshao .iopyu{
@@ -46,7 +46,7 @@ body .gerenjirdhso{
 .gerenjirdhso img{
     border-radius: 50%;
     margin: 0 auto;
-    width: 150px;
+    max-width: 150px;
     height: 150px;
 }
 .igasd {
@@ -66,8 +66,9 @@ body .gerenjirdhso{
 .ifmasd{
     position: absolute;
     bottom: 0px;
-    width: 100%;
+    width: 30%;
     height: 80px;
+   right: 0;
 }
 .uiop a img{
     width: 50px;

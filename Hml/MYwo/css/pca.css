@@ -2,6 +2,14 @@ body{
     background-color: #efe0d3dc;
     /* 网页背景颜色 */
 }
+/* #pcasdfa1{
+width: 100%;
+display: table;
+}
+.bnm{
+    display: table-cell;
+    margin-top: 0px;
+} */
 .gongyou{
     /* G共有参数 */
     height:auto;
@@ -54,7 +62,10 @@ body .gerenjirdhso{
     width: 100%;
     text-align: center;
     margin-top: 50px;
-    animation: identifiersdsf 9s linear infinite;
+    /* animation: identifiersdsf 9s linear infinite; */
+}
+.igasd:hover{
+    animation: identifiersdsf 1s linear ; 
 }
 .ioplk{
     width: 100%;
@@ -75,6 +86,7 @@ body .gerenjirdhso{
     height: 100%;
     margin: 10px;
 }
+
 .grtrncuoepi{
  margin-top: 10px;   
 }

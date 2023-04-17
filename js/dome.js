@@ -68,7 +68,7 @@ function timestampToTime(timestamp) {
 function getboke() {
   var jsisio = document.getElementById("bodydivabodyada")
   var ajax = new XMLHttpRequest();
-  ajax.open("get", "boke.json");
+  ajax.open("GET", "http://120.48.169.127/myapi");
   ajax.send();
   ajax.onreadystatechange = function () {
     if (ajax.readyState == 4 && ajax.status == 0 | 200) {

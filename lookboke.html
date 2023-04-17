@@ -95,7 +95,7 @@
     var sHref = window.location.href;
     var shspaid = sHref.split("?")[1].split("=")[1];
     var ajax = new XMLHttpRequest();
-    ajax.open("get", "boke.json");
+    ajax.open("get", "http://120.48.169.127/myapi");
     ajax.send();
     ajax.onreadystatechange = function () {
       if (ajax.readyState == 4 && ajax.status == 0 | 200) {

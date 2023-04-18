@@ -74,7 +74,7 @@ function getboke() {
     if (ajax.readyState == 4 && ajax.status == 0 | 200) {
       var poa = ajax.responseText;
       var obje = JSON.parse(poa);
-
+      var lens=0;
       for (var i in obje[2]) {
         // var ji = "";
         // klp[i] = obje.result[i]
@@ -86,17 +86,21 @@ function getboke() {
          * i:顺序
            til.split(".")[0] 名字
          */
+        if(i >= 10){
+        }
+        lens++;
         var til=obje[2][i].tl;
         var kia = '<div class="body-diva-bodya-daa" id="bodydivabodyadaa" name="' +  obje[2][i].pp.spaceused + '" onclick="chakanboke(this)"><h3>' + til.split(".")[0]+ '</h3>';
-        var kib = '<div class="diso"><h4>(来源于本站 "' +"SHAO"+ '"的选文)</h4><p class="ksjsjdjxnxnncjd">' + obje[2][i].pp.dgsa + '</p></div><time>' + timestampToTime(obje[2][i].mt) + '</time></div>';
+        var kib = '<div class="diso"><p class="ksjsjdjxnxnncjd">' + obje[2][i].pp.dgsa + '</p></div><time>' + timestampToTime(obje[2][i].mt) + '</time></div>';
         lkj = kia + kib;
         jsisio.innerHTML += lkj;
         ji = "";
       }
-
+      document.getElementById("shexhiwemzhang").innerText="一共写了"+lens+"篇文章";
     }
   }
 }
+
 /*功能栏加载*/
 /*现在时间*/
 function gongneng() {
@@ -104,4 +108,33 @@ function gongneng() {
   setTimeout(function () {
     shalert(6000, "现在是:" + new Date())
   }, 300);
+}
+
+let didinhyi = document.getElementById("uiozidonhui");
+let stringaa = "心平能愈三千疾，心静可通万事理" + "";
+let jki = 0;
+zidingyi();
+function zidingyi () {
+  setInterval(function () {
+    if (jki == stringaa.length) {
+      return;
+    }
+    didinhyi.innerText += stringaa[jki];
+    jki++;
+  }, 220);
+}
+function Setggfo(){
+  // 首页公告栏内容
+  let data=[
+    "数据已",
+    "数据二",
+    "数据三"
+  ];
+  var Sizea=0;
+  setInterval(function(){
+    didinhyi.innerText=data[Sizea];
+    Sizea++;
+    didinhyi.style.animation="";
+
+  },00)
 }

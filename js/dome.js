@@ -96,7 +96,7 @@ function getboke() {
         jsisio.innerHTML += lkj;
         ji = "";
       }
-      document.getElementById("shexhiwemzhang").innerText="一共写了"+lens+"篇文章";
+      document.getElementById("shexhiwemzhang").innerText="共有"+lens+"篇";
     }
   }
 }

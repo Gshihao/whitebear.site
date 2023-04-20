@@ -99,10 +99,21 @@
       <!-- html注释-->
       <div class="body-diva-bodya-daa cladjhdhdhs">
         <!-- 自定义内容-->
-        <p id="uiozidonhui"> </p>
-      </div>
-      <div class="divcadfrtyu">
-        <p id="shexhiwemzhang">获取失败</p>
+        <div>
+          <p id="uiozidonhui"> </p>
+          <!-- 每日一句 -->
+        </div>
+        <!-- 获取文章，文章夫人你类 -->
+        <div class="divcadfrtyu">
+          <!-- 先用seiet 标签，以后有条件更换
+          -->
+          <select name="" id="Myselectonr">
+            <option value="">0</option>
+            <option value="">1</option>
+            <option value="">2</option>
+          </select>
+          <p id="shexhiwemzhang" >获取失败</p>
+        </div>
       </div>
       <div class="body-diva-bodya-da" id="bodydivabodyada">
         <!-- 这里放博客文章 -->
@@ -126,7 +137,7 @@
       </p>
       <p>
         <span>中国-山东</span>
-        <span id="yemiamqingwqiu"></span>  <!-- 页面请求次数 -->
+        <span id="yemiamqingwqiu"></span> <!-- 页面请求次数 -->
         <span id="neicun"></span> <!-- 内存使用 -->
       </p>
       <p>
@@ -173,7 +184,7 @@
     </div>
   </div>
   <div class="buttomAsd">
-   
+
   </div>
   <script src="js/dome.js"></script>
   <script>
@@ -281,7 +292,7 @@
     }
     // 运行时间
     //用来监听网页的请求
-    var jiantinglen=0;
+    var jiantinglen = 0;
     Object.defineProperty(XMLHttpRequest.prototype, "status", {
       get: function (status) {
         jiantinglen++;
@@ -307,7 +318,7 @@
         var localp = window.performance.memory.totalJSHeapSize / 1024 / 1024;
 
         document.getElementById("neicun").innerText = "内存使用 " + localp.toFixed(2);
-        document.getElementById("yemiamqingwqiu").innerText="请求："+jiantinglen;
+        document.getElementById("yemiamqingwqiu").innerText = "请求：" + jiantinglen;
       }, 300)
     } 
   </script>

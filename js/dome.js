@@ -111,7 +111,7 @@ function gongneng() {
 }
 
 let didinhyi = document.getElementById("uiozidonhui");
-let stringaa = "心平能愈三千疾，心静可通万事理" + "";
+let stringaa = "你好，2024" + "";
 let jki = 0;
 zidingyi();
 function zidingyi () {

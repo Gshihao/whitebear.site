@@ -110,9 +110,9 @@
             document.title = "《" + kji.tl.split(".")[0] + "》---" + "SHAO";
             document.getElementsByTagName("meta")[1].content = kji.tl.split(".")[0] + ",博客,SHAO,个人博客,网站,个人,工具,文章,教学";
             document.getElementById("h1title").innerText = kji.tl.split(".")[0];
-            document.getElementById("nameas").innerText = "作者: " + "SHAO helloWorld";
+            document.getElementById("nameas").innerText = "作者: " + "SHAO";
             document.getElementById("datasize").innerText = "字数:" + kji.pp.dg.length + "字";
-            document.getElementById("timeas").innerText = "投报时间: " +timestampToTime(kji.mt);
+            document.getElementById("timeas").innerText = "最后更改: " +timestampToTime(kji.mt);
             datalocal("bodynamdat", kji.pp.dg);
           }
 

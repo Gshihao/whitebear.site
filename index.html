@@ -187,6 +187,9 @@
 
   </div>
   <script src="js/dome.js"></script>
+  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script><!--引用百度jqku-->
+  <script src="js/Mouseonclick.js"></script><!--鼠标点击效果 -->
+  <script src="Hml/MYwo/ifpc.js"></script>
   <script>
     //记载博客文章
     getboke()
@@ -278,7 +281,8 @@
       if (lwn >= 1038) {
         lwn = 1000;
       } else {
-        lwn = lwn - 29;
+        // 29
+        lwn = lwn - 59;
       }
       var iop = document.getElementsByClassName("mkoijnuhb");
       document.getElementById("sfjsklakkbabja").style.width = lwn + "px";
@@ -320,10 +324,14 @@
         document.getElementById("neicun").innerText = "内存使用 " + localp.toFixed(2);
         document.getElementById("yemiamqingwqiu").innerText = "请求：" + jiantinglen;
       }, 300)
+      if (!browser.versions.mobile || browser.versions.iPad) {
+            //  当界面为pc端时
+            // document.body.style.width ="90%";
+        } else {
+          
+        }
     } 
   </script>
-  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script><!--引用百度jqku-->
-  <script src="js/Mouseonclick.js"></script><!--鼠标点击效果 -->
 </body>
 
 </html>

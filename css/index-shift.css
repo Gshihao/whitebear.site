@@ -14,6 +14,7 @@ body {
   height: 100%;
   background-size: 100%;
   background-color: #ededed;
+  margin: 0 auto;
 }
 /*加载动画栏*/
 .loading-diva {

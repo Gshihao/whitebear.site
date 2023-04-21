@@ -1,0 +1,92 @@
+body{
+    background-color: #efe0d3dc;
+    /* 网页背景颜色 */
+}
+/* #pcasdfa1{
+width: 100%;
+display: table;
+}
+.bnm{
+    display: table-cell;
+    margin-top: 0px;
+} */
+.gongyou{
+    /* G共有参数 */
+    height:auto;
+    margin: 5PX;
+    border-radius: 15px;
+    background-color: #fff; 
+    /* 板块背景颜色 */
+}
+body .wangzhanjieshao{
+    /* 网站介绍 */
+    float: left;
+    width: 60%;
+    margin: 5PX;
+}
+body .gerenjirdhso{
+    /* 个人介绍 */
+    width: 34%;
+    float: right;
+}
+.wangzhanjieshao .iopyu{
+    background-color: #fff; 
+    padding: 1px;
+    border-radius: 15px;
+    margin-bottom: 5px;
+}
+.wangzhanjieshao p{
+    text-indent: 2em;
+}
+.wangzhanjieshao span{
+    font-size: 11px;
+}
+.iopyu .p1{
+    margin: 30px;
+}
+
+@keyframes identifiersdsf {
+    0%{}
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.gerenjirdhso img{
+    border-radius: 50%;
+    margin: 0 auto;
+    max-width: 150px;
+    height: 150px;
+}
+.igasd {
+    /* 存放投降的容器 */
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    /* animation: identifiersdsf 9s linear infinite; */
+}
+.igasd:hover{
+    animation: identifiersdsf 1s linear ; 
+}
+.ioplk{
+    width: 100%;
+    text-align: center;
+}
+.opkl{
+    font-size:10px;
+}
+.ifmasd{
+    position: absolute;
+    bottom: 0px;
+    width: 30%;
+    height: 80px;
+   right: 0;
+}
+.uiop a img{
+    width: 50px;
+    height: 100%;
+    margin: 10px;
+}
+
+.grtrncuoepi{
+ margin-top: 10px;   
+}

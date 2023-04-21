@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>懒人代写</title>
+    <style>
+         *{margin: 0px;padding:0px;}
+         .diva{
+            padding: 10px;
+            width: 100%;
+         }
+         .diva img{
+         }
+    </style>
+</head>
+<body>
+    <div class="bodyasd">
+        <div class="diva">
+            <img src="" alt="" class="" id="fgh">
+        </div>
+        <div class="divb">
+            <input type="FIle" onblur="" onchange="Getgu(event)">
+        </div>
+    </div>
+    <script>
+        function Getgu(event){
+            var fole=event.target.files[0];
+            var io=URL.createObjectURL(fole);
+            document.getElementById("fgh").src=io;
+            alert(io);
+        }
+    </script>
+</body>
+</html>

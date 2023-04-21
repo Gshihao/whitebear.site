@@ -1,0 +1,79 @@
+.myco {
+    width: 100%;
+    text-align: center;
+}
+.myco img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 100px;
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
+    animation: mayu 7s infinite linear;
+}
+
+.myco p {
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
+}
+
+.mrtext {
+    margin-top: 30px;
+    width: 70%;
+    margin: 0 auto;
+    text-indent: 2em;
+}
+
+audio {
+    position: absolute;
+    bottom: 0px;
+    margin: 0 auto;
+    left: 0px;
+}
+
+@keyframes mayu {
+    from {}
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.myco button {
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    border: 0.5px solid black;
+    background-color: #fff;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
+    margin-top: 50%;
+}
+
+
+
+
+
+
+/* 测试届满前 */
+.androidasdfa1{
+
+}
+.contea{
+    scroll-snap-type: y mandatory;
+}
+.uio{
+    scroll-snap-align: start;
+}
+.cla{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+}
+.onea{
+    background-color: antiquewhite;
+}
+.twoa{
+    background-color: rgb(17, 134, 32);
+}
+.threeea{
+    background-color: blue;
+}

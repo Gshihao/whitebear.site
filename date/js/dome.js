@@ -111,7 +111,7 @@ function gongneng() {
 }
 
 let didinhyi = document.getElementById("uiozidonhui");
-let stringaa = "你好，2024" + "";
+let stringaa = '欢迎访问 http://120.48.169.127/';
 let jki = 0;
 zidingyi();
 function zidingyi () {

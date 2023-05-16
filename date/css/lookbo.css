@@ -34,7 +34,7 @@ body{
    border-left:4px solid #050000;
    margin:5px;
   }
-#timeas{
+.body-bia-boda-hea{
   border-bottom:1px dashed #050000;
   }
 /*css 主体  */
@@ -191,4 +191,14 @@ body{
 .newDaohangln-div-bodya11v a{
    text-overflow:ellipsis;
 
+  }
+  .rtoprtrogrgegrge{
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+  }
+  .rtoprtrogrgegrge img {
+    height: 40px;
+    width: 40px;
+    /* border-radius: 50%; */
   }

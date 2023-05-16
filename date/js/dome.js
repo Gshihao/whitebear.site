@@ -91,15 +91,19 @@ function getboke() {
         lens++;
         var til=obje[2][i].tl;
         var kia = '<div class="body-diva-bodya-daa" id="bodydivabodyadaa" name="' +  obje[2][i].pp.spaceused + '" onclick="chakanboke(this)"><h3>' + til.split(".")[0]+ '</h3>';
-        var kib = '<div class="diso"><p class="ksjsjdjxnxnncjd">' + obje[2][i].pp.dgsa + '</p></div><time>' + timestampToTime(obje[2][i].mt) + '</time></div>';
+        var kib = '<div class="diso"><p class="ksjsjdjxnxnncjd">' + obje[2][i].pp.dgsa + '</p></div class="asdjaklsd"> <span style="position: absolute;"><img class="skdldad" st';
+            kib+= 'yle="display:block;float: left;" src="../date/img/10/local11.png" alt=""><span class="sdhsdjakd">' + obje[2][i].pp.pr + '</span>';
+            kib +='</span><time>' + timestampToTime(obje[2][i].mt) + '</time></div>';
         lkj = kia + kib;
         jsisio.innerHTML += lkj;
         ji = "";
       }
-      document.getElementById("shexhiwemzhang").innerText="共有"+lens+"篇";
+      document.getElementById("shexhiwemzhang").innerText="文档数量"+" "+lens+"😍";
     }
   }
 }
+// C:\Users\郭世豪\Desktop\whitebear.site\date\img\10\local11.png
+// C:\Users\郭世豪\Desktop\whitebear.site\date\js\dome.js
 
 /*功能栏加载*/
 /*现在时间*/

@@ -188,8 +188,9 @@
       var ajax = new XMLHttpRequest();
       var sHref = window.location.href;
       var shspaid = sHref.split("?")[1].split("=")[1].split("/")[2];
-      ajax.open("post", "http://120.48.169.127/mapan");
-      ajax.send("url=" + shspaid);
+      console.log(shspaid)
+      ajax.open("get", "http://120.48.169.127/mapan?url=" + shspaid);
+      ajax.send();
       ajax.onreadystatechange = function () {
         if (ajax.readyState == 4 && ajax.status == 0 | 200) {
           var poa = JSON.parse(ajax.responseText);

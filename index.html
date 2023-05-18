@@ -5,7 +5,8 @@
   <meta charset="utf-8" name="viewport"
     content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link rel="stylesheet" type="text/css" href="date/css/index-shift.css">
-  <meta name="keywords" content="博客,SHAO,个人博客,网站,个人,工具,文章,教学,分享，">
+  <link rel="stylesheet" href="date/css/StartHome.css"><!-- 启动页样式 -->
+  <meta name="keywords" content="博客,SHAO,个人博客,网站,个人,工具,文章,教学,分享">
   <meta name="baidu-site-verification" content="code-BGEyMce45T" /> <!--防止照片重定向-->
   <meta name="360-site-verification" content="25591daa70bd7ac0d3afa51981d03e5c" />
   <meta name="referrer" content="no-referrer" />
@@ -190,20 +191,37 @@
   <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script><!--引用百度jqku-->
   <script src="date/js/Mouseonclick.js"></script><!--鼠标点击效果 -->
   <script src="date/Hml/MYwo/ifpc.js"></script>
+  <script src="date/js/MOde/StatHome.js"></script> <!-- 开平  -->
   <script>
     //记载博客文章
     getboke()
-    window.onload = function () {
-      //页面加载完成 关闭加载效果
+    zitoUpperCase();
+    function Colsenopoy(){
+      document.getElementById("startAHoeme").style.animation="StartHomeTop 0.5s forwards";
+    }
+    let Colserty=()=>{
       document.getElementById("loading-diva").style.display = "none";
       let dh = sessionStorage.getItem("key")
       if (dh == null) {
         setTimeout(function () {
           shalert(7000, "祝各位看官皆遇良人")
+          Colsenopoy()
         }, 1000);
         sessionStorage.setItem("key", "aa");
       }
+      setTimeout(function () {
+        Colsenopoy()
+        }, 1000);
+    };
+    window.onload = function () {
+      //页面加载完成 关闭加载效果
+      Colserty();
     }
+    setTimeout(()=>{
+      Colserty();
+    },4000); // 当加载4000毫秒时
+
+
     //后台管理() backstagedome
     function backstagedome() {
 

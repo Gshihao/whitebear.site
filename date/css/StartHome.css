@@ -1,0 +1,118 @@
+/* 
+   @ ; s首页启动
+*/
+*{margin:0px;padding:0px;}
+.startAHome{ /*加载页面 底部遮罩层 a1*/
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0%;
+  background-color:rgb(255, 255, 255);
+ /* animation:*/
+  }
+@keyframes StartHomeTop{
+  100%{
+    top:-100%;
+    }
+  }
+.startAHomeA{
+  position:relative;
+  width:80%;
+  max-width:400px;/*设置最大宽度*/
+  height:50px;
+  margin:0 auto;
+  top:35%;
+  }
+.startAHomeAcon{
+  position:relative;
+  width:50px;
+  height:50px;
+  margin:0 auto;
+  text-align:center;
+  }
+.startAHomeAcon span{
+  position:absolute;
+  display:block;
+  width:50px;
+  height:50px;
+  border-radius:10px 10px 10px 10px;
+  }
+.startAHomeAconT{
+  border:2px solid #00beff;
+  box-shadow:2px 2px 20px #00beff;
+  animation:startAHomeAconKOnr 3s infinite;
+  }
+.startAHomeAconK{
+  border:2px solid #ffbb00;
+  box-shadow:2px 2px 20px #ffbb00;
+  animation:startAHomeAconKTWO 3s infinite;
+  }
+.startAHomeAThine{
+  border:2px solid #48ff00;
+  box-shadow:2px 2px 20px #48ff00;
+  animation:startAHomeAThinetuo 3s infinite;
+  }
+.startAHomeAFove{
+  border:2px solid #ff00a2;
+  box-shadow:2px 2px 20px #ff00a2;
+  animation:startAHomeAFovetuo 3s infinite;
+  }
+@keyframes startAHomeAconKOnr{
+   0%{
+      bottom:0px;
+     }
+   50%{
+     bottom:100px;
+     transform: rotate(360deg);
+     border-radius:25px 25px 25px 25px;
+     }
+   90%{
+     bottom:0px;
+     transform: rotate(-0deg);
+     }
+   100%{}
+  }
+@keyframes startAHomeAconKTWO{
+  0%{bottom:100px;}
+  50%{bottom:-100px;transform: rotate(360deg);border-radius:25px 25px 25px 25px;}
+  100%{bottom:100px;transform: rotate(0deg);}
+  }
+@keyframes startAHomeAThinetuo{
+  0%{left:100px;}
+  50%{left:-100px;transform: rotate(360deg);border-radius:25px 25px 25px 25px;}
+  100%{left:100px;transform: rotate(0deg);}
+  }
+@keyframes startAHomeAFovetuo{
+  0%{right:100px;}
+  50%{right:-100px;transform: rotate(360deg);border-radius:25px 25px 25px 25px;}
+  100%{right:100px;transform: rotate(0deg);}
+  }
+.startAHomeB{
+  position:relative;
+  width:300px;
+  text-align:center;
+  margin:0 auto;
+  top:55%;
+  padding:20px;
+  }
+.jsjdhdbdbdbb{
+  margin-top:20px;
+  position:relative;
+  display:inline-block;
+  margin: 5px auto;
+  width:10px;
+  padding:5px;
+  top:0px;
+  background-color:#ffffff;
+  border-radius:7px;
+  transition: all 1s;
+  box-shadow:5px 5px 10px rgb(0,0,0,.2),
+             -5px -5px 10px rgb(0,0,0,.2);
+  }
+@keyframes spangunadong{
+  0%{top:0px;}
+  25%{}
+  40%{top:-35px}
+  85%{top:35px;}
+  100%{}
+  }

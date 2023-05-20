@@ -1,0 +1,68 @@
+.NewClassItemv1{
+    position: relative;
+    width: 90%;
+    margin: 30px auto;
+    min-height: 150px;
+    background-color: aliceblue;
+    /* background-color: aquamarine; */
+}
+.NewClassItemv1img{
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .2),
+    -5px -5px 15px rgba(0, 0, 0, .2);
+    vertical-align: middle;
+}
+.DIvNEwCona1{ /* 遮罩层*/
+    position: absolute;
+    bottom: 0px;
+    /* height: 120px; */
+    width: 100%;
+    background-color: rgba(0, 0, 0, .3);
+    vertical-align: middle;
+    padding-top: 5px;
+}
+.NEwviocont a {
+   color: aliceblue;
+   text-decoration: none;
+}
+.NEwvioconta1{
+  font-size: 23px;
+  padding: 10px;
+}
+.NEwvioconta2{
+    display: block;
+    padding: 10px;
+}
+.NEwvioconta2p{
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: lighter;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+}
+.Nuevisituiop{
+    position: relative;
+    font-size: 13px;
+    color: aliceblue;
+    text-align: right;
+    padding-right: 15px;
+    margin-bottom: 10px;
+}
+.shgduaihgduaisdhiu{
+     color: aliceblue;
+     float: right;
+     text-align: right;
+     margin-right: 30px;
+     margin-top: 5px;
+}
+.shgduaihgduaisdhiu img{
+    width: 20px;
+}
+.shgduaihgduaisdhiu span{
+    vertical-align: top;
+}

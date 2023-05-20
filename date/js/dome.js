@@ -65,6 +65,24 @@ function timestampToTime(timestamp) {
   var s = date.getSeconds();
   return Y+M+D+h+m+s;
 }
+function Getimga(iyu){
+  var content = '<P><img src="http://bbs.cn.yimg.com/user_img/200701/31/jisuanji986_117025184198149.jpg" mce_src="http://bbs.cn.yimg.com/user_img/200701/31/jisuanji986_117025184198149.jpg"></P>'
+      let imgReg = /<img.*?(?:>|\/>)/gi //匹配图片中的img标签
+      let srcReg = /src=[\'\"]?([^\'\"]*)[\'\"]?/i // 匹配图片中的src
+      let arr = iyu.match(imgReg)  //筛选出所有的img
+      let srcArr = []
+     try{
+      for (let i = 0; i < arr.length; i++) {
+        let src = arr[i].match(srcReg)
+        // 获取图片地址
+        srcArr.push(src[1])
+      }
+      
+      return srcArr[0];
+     }catch(reo){
+      return "date/img/10/259.png";
+     }
+}
 function getboke() {
   var jsisio = document.getElementById("bodydivabodyada")
   var ajax = new XMLHttpRequest();
@@ -90,12 +108,17 @@ function getboke() {
         }
         lens++;
         var til=obje[2][i].tl;
-        var kia = '<div class="body-diva-bodya-daa" id="bodydivabodyadaa" name="' +  obje[2][i].pp.spaceused + '" onclick="chakanboke(this)"><h3>' + til.split(".")[0]+ '</h3>';
-        var kib = '<div class="diso"><p class="ksjsjdjxnxnncjd">' + obje[2][i].pp.dgsa + '</p></div class="asdjaklsd"> <span style="position: absolute;"><img class="skdldad" st';
-            kib+= 'yle="display:block;float: left;" src="../date/img/10/local11.png" alt=""><span class="sdhsdjakd">' + obje[2][i].pp.pr + '</span>';
-            kib +='</span><time>' + timestampToTime(obje[2][i].mt) + '</time></div>';
-        lkj = kia + kib;
-        jsisio.innerHTML += lkj;
+        let kia= '<div class="NewClassItemv1" name="'+obje[2][i].pp.spaceused+'" onclick="chakanboke(this)"><img src="'+Getimga(obje[2][i].pp.dg)+'" alt="date/img/10/259.png" class="NewClassItemv1img"> <!-- 展示图片 --><div class="DIvNEwCona1">';
+            kia+=' <div class="NEwviocont"> <a href="#" class="NEwvioconta1">'+til.split(".")[0]+'</a><!-- 标题 --> ';
+            kia+=' <span class="shgduaihgduaisdhiu"><img src="date/img/10/doainzan.png" alt=""> <span>' + obje[2][i].pp.pr + '</span></span>';
+            kia+='<a href="#" class="NEwvioconta2"><p class="NEwvioconta2p">' + obje[2][i].pp.dgsa + '</p></a><!-- 简介 --></div><div class="Nuevisit">';
+            kia+='<p class="Nuevisituiop">' + timestampToTime(obje[2][i].mt) + '</p><!-- 时间 --></div> </div> </div>';
+        // var kia = '<div class="body-diva-bodya-daa" id="bodydivabodyadaa" name="' +   + '" onclick="chakanboke(this)"><h3>' + + '</h3>';
+        // var kib = '<div class="diso"><p class="ksjsjdjxnxnncjd">' + obje[2][i].pp.dgsa + '</p></div class="asdjaklsd"> <span style="position: absolute;"><img class="skdldad" st';
+        //     kib+= 'yle="display:block;float: left;" src="../date/img/10/local11.png" alt=""><span class="sdhsdjakd">' + obje[2][i].pp.pr + '</span>';
+        //     kib +='</span><time>' + timestampToTime(obje[2][i].mt) + '</time></div>'
+        jsisio.innerHTML += kia;
+        // 调试需要
         ji = "";
       }
       document.getElementById("shexhiwemzhang").innerText="文档数量"+" "+lens+"😍";

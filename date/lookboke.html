@@ -96,7 +96,7 @@
     }())
     let alertA = (context) => {
       document.getElementById("AlertOverridea").style.display = "block"; 
-        document.getElementById("AlertOverridea").style.top = "0px";
+      document.getElementById("AlertOverridea").style.bottom = "0px";
       document.getElementById("cuowuAlertOverridea").innerText = context;
       document.getElementById("dkdkjdjfjjfjfjf").onclick = function () {
         document.getElementById("AlertOverridea").style.display = "none";
@@ -194,7 +194,6 @@
       ajax.onreadystatechange = function () {
         if (ajax.readyState == 4 && ajax.status == 0 | 200) {
           var poa = JSON.parse(ajax.responseText);
-          console.log(poa)
           if (poa != null) {
             alertA("点赞成功")
             document.getElementById("rtoprtrogrgegrge").style.display = "none";

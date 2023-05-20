@@ -115,6 +115,7 @@ body {
 
 /*css alert自定义提示栏 top*/
 .body-alert-aa {
+  z-index: 1;
   position: absolute;
   min-height: 20px;
   max-height: 100px;
@@ -453,13 +454,17 @@ body {
 }
 
 /*css 下滑栏内容*/
+.newDaohangln-div{
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
 .newDaohangln-div-body {
   height: 0px;
   display: none;
 }
 .newDaohangln-div-body p{
   cursor: pointer;
-
 }
 /*css 一级标题的icon图标*/
 .newDaohangln-div-bodya111vimg {

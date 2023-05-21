@@ -83,45 +83,87 @@ function Getimga(iyu){
       return "date/img/10/259.png";
      }
 }
-function getboke() {
+function setConSeeerverTIme(Con,lan,cook){
   var jsisio = document.getElementById("bodydivabodyada")
+  jsisio.innerHTML = "";
+  var obje = JSON.parse(Con);
+  let len=0;
+  if(cook == 100){
+    len =lan;
+  }else{
+    len = parseInt(lan) +5;
+  }
+  sessionStorage.setItem("datLen",len)
+  for (var i in obje[2]) {
+    /*
+     * i:顺序
+       til.split(".")[0] 名字
+     */
+    if(i >= len){
+     break;
+    }
+    var til=obje[2][i].tl;
+    let kia= '<div class="NewClassItemv1" name="'+obje[2][i].pp.spaceused+'" onclick="chakanboke(this)"><img src="'+Getimga(obje[2][i].pp.dg)+'" alt="date/img/10/259.png" class="NewClassItemv1img"> <!-- 展示图片 --><div class="DIvNEwCona1">';
+        kia+=' <div class="NEwviocont"> <a href="#" class="NEwvioconta1">'+til.split(".")[0]+'</a><!-- 标题 --> ';
+        kia+=' <span class="shgduaihgduaisdhiu"><img src="date/img/10/doainzan.png" alt=""> <span>' + obje[2][i].pp.pr + '</span></span>';
+        kia+='<a href="#" class="NEwvioconta2"><p class="NEwvioconta2p">' + obje[2][i].pp.dgsa + '</p></a><!-- 简介 --></div><div class="Nuevisit">';
+        kia+='<p class="Nuevisituiop">' + timestampToTime(obje[2][i].mt) + '</p><!-- 时间 --></div> </div> </div>';
+    jsisio.innerHTML += kia;
+    // 调试需要
+    ji = "";
+  }
+  document.getElementById("shexhiwemzhang").innerText="文档数量"+" "+obje[2].length+"😍";
+}
+function setConSeeerver(Con,lan,cook){
+  var jsisio = document.getElementById("bodydivabodyada")
+  jsisio.innerHTML = "";
+  var obje = JSON.parse(Con);
+  let len=0;
+  if(cook == 100){
+    len =lan;
+  }else{
+    len = parseInt(lan) +5;
+  }
+  sessionStorage.setItem("datLen",len)
+  // 冒泡排序法
+  let Jsona='';
+    for(var i=0;i<obje[2];i++){
+    if(obje[2][i].pp.pr < obje[2][i+1].pp.pr){
+      // 如果第一个大于第二个
+      var jsb=obje[2][i+1].pp.pr;
+      
+    }
+  }
+
+}
+function setConSeeerver(cook){
+  let Con=sessionStorage.getItem("dateCon");
+  let len = sessionStorage.getItem("datLen"); // 获取现在屏幕显示的s
+  var myselect=document.getElementById("Myselectonr");
+  var index=myselect.selectedIndex ; 
+  switch(myselect.options[index].value){
+    case "time":
+      console.log(12)
+      setConSeeerverTIme(Con,len,cook);
+      break;
+    case "Start":
+      setConSeeerverStart(Con,len,cook);
+      break;
+  }
+  console.log()
+}
+function getboke() {
   var ajax = new XMLHttpRequest();
   ajax.open("GET", "http://120.48.169.127/myapi");
   ajax.send();
   ajax.onreadystatechange = function () {
     if (ajax.readyState == 4 && ajax.status == 0 | 200) {
       var poa = ajax.responseText;
-      var obje = JSON.parse(poa);
-      var lens=0;
-      for (var i in obje[2]) {
-        // var ji = "";
-        // klp[i] = obje.result[i]
-        // for (var j = 0; j < obje.result[i].content.length; j++) {
-        //   ji += obje.result[i].content[j]
-        // }
-        // ji = ji.replace(/<[^>]+>/g, "");
-        /*
-         * i:顺序
-           til.split(".")[0] 名字
-         */
-        if(i >= 10){
-        }
-        lens++;
-        var til=obje[2][i].tl;
-        let kia= '<div class="NewClassItemv1" name="'+obje[2][i].pp.spaceused+'" onclick="chakanboke(this)"><img src="'+Getimga(obje[2][i].pp.dg)+'" alt="date/img/10/259.png" class="NewClassItemv1img"> <!-- 展示图片 --><div class="DIvNEwCona1">';
-            kia+=' <div class="NEwviocont"> <a href="#" class="NEwvioconta1">'+til.split(".")[0]+'</a><!-- 标题 --> ';
-            kia+=' <span class="shgduaihgduaisdhiu"><img src="date/img/10/doainzan.png" alt=""> <span>' + obje[2][i].pp.pr + '</span></span>';
-            kia+='<a href="#" class="NEwvioconta2"><p class="NEwvioconta2p">' + obje[2][i].pp.dgsa + '</p></a><!-- 简介 --></div><div class="Nuevisit">';
-            kia+='<p class="Nuevisituiop">' + timestampToTime(obje[2][i].mt) + '</p><!-- 时间 --></div> </div> </div>';
-        // var kia = '<div class="body-diva-bodya-daa" id="bodydivabodyadaa" name="' +   + '" onclick="chakanboke(this)"><h3>' + + '</h3>';
-        // var kib = '<div class="diso"><p class="ksjsjdjxnxnncjd">' + obje[2][i].pp.dgsa + '</p></div class="asdjaklsd"> <span style="position: absolute;"><img class="skdldad" st';
-        //     kib+= 'yle="display:block;float: left;" src="../date/img/10/local11.png" alt=""><span class="sdhsdjakd">' + obje[2][i].pp.pr + '</span>';
-        //     kib +='</span><time>' + timestampToTime(obje[2][i].mt) + '</time></div>'
-        jsisio.innerHTML += kia;
-        // 调试需要
-        ji = "";
-      }
-      document.getElementById("shexhiwemzhang").innerText="文档数量"+" "+lens+"😍";
+      sessionStorage.setItem("dateCon",poa);
+      sessionStorage.setItem("datLen",4);
+      // 初始化，默认为5条数据，每次添加5条数据
+      setConSeeerver(100);
+
     }
   }
 }

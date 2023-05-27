@@ -571,5 +571,21 @@ s#shexhiwemzhang{
   border: 1px solid black;
   padding: 8px;
   border-radius: 14px;
+  overflow: hidden;
+  z-index: 1;
   
 }
+/* .ueritrgelkglekgrel{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+}
+.sdjosdkoaodkoa{
+  position: absolute;
+  height: 100%;
+  display: inline-block;
+  width: 30px;
+  z-index: 0;
+  background-color: #00f0ff;
+} */

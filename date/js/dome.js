@@ -102,6 +102,12 @@ function setConSeeerverTIme(Con,lan,cook){
     if(i >= len){
      break;
     }
+    if((len/parseInt(obje[2].length)*100).toFixed(2) > 100){
+      document.getElementById("lookshnegyu").innerText="剩余0.00%"
+    }else{
+      document.getElementById("lookshnegyu").innerText="剩余"+(100-parseInt((len/parseInt(obje[2].length)*100).toFixed(2)))+"%"
+    }
+    console.log(len+"/"+( len/parseInt(obje[2].length)*100).toFixed(2))
     var til=obje[2][i].tl;
     let kia= '<div class="NewClassItemv1" name="'+obje[2][i].pp.spaceused+'" onclick="chakanboke(this)"><img src="'+Getimga(obje[2][i].pp.dg)+'" alt="date/img/10/259.png" class="NewClassItemv1img"> <!-- 展示图片 --><div class="DIvNEwCona1">';
         kia+=' <div class="NEwviocont"> <a href="#" class="NEwvioconta1">'+til.split(".")[0]+'</a><!-- 标题 --> ';
@@ -143,7 +149,6 @@ function setConSeeerver(cook){
   var index=myselect.selectedIndex ; 
   switch(myselect.options[index].value){
     case "time":
-      console.log(12)
       setConSeeerverTIme(Con,len,cook);
       break;
     case "Start":

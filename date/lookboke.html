@@ -9,14 +9,8 @@
   <link rel="stylesheet" href="css/Alerty.css">
   <meta name="keywords" content="">
   <title></title>
-  <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script> 
-  <!-- 使用 highlight 的代码高亮库-->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
-    <script>
-      hljs.highlightAll();
-    </script>
-    <!--  使用 highlight 的代码高亮-->
+
+  <!--  使用 highlight 的代码高亮-->
 </head>
 
 <body>
@@ -102,7 +96,7 @@
       document.body.innerHTML += Ret;
     }())
     let alertA = (context) => {
-      document.getElementById("AlertOverridea").style.display = "block"; 
+      document.getElementById("AlertOverridea").style.display = "block";
       document.getElementById("AlertOverridea").style.bottom = "0px";
       document.getElementById("cuowuAlertOverridea").innerText = context;
       document.getElementById("dkdkjdjfjjfjfjf").onclick = function () {
@@ -110,6 +104,7 @@
         // var sfty = document.body.style.overflow="";
       }
     }
+    
     function timestampToTime(timestamp) {
       var date = new Date(timestamp * 1000);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
       var Y = date.getFullYear() + '-';
@@ -143,6 +138,7 @@
             document.getElementById("timeas").innerText = "最后更改: " + timestampToTime(kji.mt);
             document.getElementById("dkaodj").innerText = "点赞：" + kji.pp.pr;
             datalocal("bodynamdat", kji.pp.dg);
+            Setcodue();
           }
 
         }
@@ -174,6 +170,36 @@
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     }
+    function Setcodue(){
+      // 
+      // 创建一个 <script> 元素
+      var script = document.createElement('script');
+      // script.type = 'module';
+      // script.src = 'https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js';
+
+      // 将 <script> 元素添加到 HTML 的 <head> 元素中
+      document.head.appendChild(script);
+
+      // 创建一个 <link> 元素
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = '//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css';
+
+      // 将 <link> 元素添加到 HTML 的 <head> 元素中
+      document.head.appendChild(link);
+
+      // 创建一个 <script> 元素
+      var script2 = document.createElement('script');
+      script2.src = '//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js';
+
+      // 将 <script> 元素添加到 HTML 的 <head> 元素中
+      document.head.appendChild(script2);
+
+      // 调用 highlight.js 的 highlightAll() 方法
+      // document.addEventListener('DOMContentLoaded', function () {
+      //   hljs.highlightAll();
+      // });
+    };
     /*打开导航栏*/
     let coor = 0;
     function opennew() {
@@ -209,6 +235,15 @@
         }
       }
     }
+    window.onload = function() {
+      // 调用 hljs.highlightAll()，高亮页面上的所有代码段
+      setTimeout(function(){
+        hljs.highlightAll();
+      },1000)
+      setTimeout(() => {
+        hljs.highlightAll();
+      }, 2000);
+    }
   </script>
   <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script><!--引用百度jqku-->
   <script src="js/Mouseonclick.js"></script><!--鼠标点击效果 -->
@@ -221,6 +256,7 @@
       document.body.style.background = "";
     }
   </script>
+  <!-- <script> hljs.highlightAll();</script> -->
 </body>
 
 </html>

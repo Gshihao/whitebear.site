@@ -104,7 +104,7 @@
         // var sfty = document.body.style.overflow="";
       }
     }
-    
+
     function timestampToTime(timestamp) {
       var date = new Date(timestamp * 1000);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
       var Y = date.getFullYear() + '-';
@@ -132,6 +132,8 @@
             ifyour = true;
             document.title = "《" + kji.tl.split(".")[0] + "》---" + "SHAO";
             // document.getElementsByTagName("meta")[1].content = kji.tl.split(".")[0] + ",博客,SHAO,个人博客,网站,个人,工具,文章,教学";
+            var meta = document.querySelector('meta[name="keywords"]');
+            meta.setAttribute('content', kji.tl.split(".")[0]+'，博客,SHAO,个人博客,网站,个人,工具,文章,教学');
             document.getElementById("h1title").innerText = kji.tl.split(".")[0];
             document.getElementById("nameas").innerText = "作者😁: " + "SHAO";
             document.getElementById("datasize").innerText = "字数:" + kji.pp.dg.length + "字";
@@ -170,7 +172,7 @@
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     }
-    function Setcodue(){
+    function Setcodue() {
       // 
       // 创建一个 <script> 元素
       var script = document.createElement('script');
@@ -235,11 +237,11 @@
         }
       }
     }
-    window.onload = function() {
+    window.onload = function () {
       // 调用 hljs.highlightAll()，高亮页面上的所有代码段
-      setTimeout(function(){
+      setTimeout(function () {
         hljs.highlightAll();
-      },1000)
+      }, 1000)
       setTimeout(() => {
         hljs.highlightAll();
       }, 2000);

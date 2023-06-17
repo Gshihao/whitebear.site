@@ -80,7 +80,7 @@ function Getimga(iyu){
       
       return srcArr[0];
      }catch(reo){
-      return "date/img/10/259.png";
+      return "https://note.youdao.com/yws/public/resource/8bd3243ed00d9ea29022489fec17529e/xmlnote/WEBRESOURCEed494ec7465cd7d36f3746bb62160c58/281";
      }
 }
 function setConSeeerverTIme(Con,lan,cook){

@@ -358,9 +358,9 @@
         if (false) { return; }
 
         // neicun
-        var localp = window.performance.memory.totalJSHeapSize / 1024 / 1024;
-
-        document.getElementById("neicun").innerText = "内存使用 " + localp.toFixed(2);
+        var memoryInfo = window.performance.memory;
+        var usedMemoryInMB = (memoryInfo.usedJSHeapSize / 1048576).toFixed(2); // 将字节转换为MB单位
+        document.getElementById("neicun").innerText = "内存使用 " + usedMemoryInMB;
         document.getElementById("yemiamqingwqiu").innerText = "请求：" + jiantinglen;
       }, 300)
       if (!browser.versions.mobile || browser.versions.iPad) {

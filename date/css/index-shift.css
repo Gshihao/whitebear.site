@@ -566,13 +566,26 @@ s#shexhiwemzhang{
 
 
 .jiazaigengguofj{
+  position: relative;
   display:inline-block;
   height: 15xp;
   border: 1px solid black;
   padding: 8px;
-  border-radius: 14px;
+  border-radius: 15px;
   overflow: hidden;
   z-index: 1;
+  padding: 6px 20px
+}
+.jiazaigengguofj::after{
+  position: absolute;
+  content: "";
+  width: 8px;
+  top: 50%;
+  /* 让板块居中 */
+  height: 8px;
+  border-top: 1px solid black; 
+   border-right: 1px solid black;
+   transform: rotate(45deg) translate(0,-50%);
   
 }
 /* .ueritrgelkglekgrel{

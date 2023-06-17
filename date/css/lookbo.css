@@ -202,3 +202,10 @@ body{
     width: 40px;
     /* border-radius: 50%; */
   }
+  .filecode{
+    max-width: 380px;
+    height: 80px;
+    background-color: #b1d1a2bb;
+    border-radius: 10px;
+  }
+ 

@@ -1,0 +1,535 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 15rem;
+    margin: 0 auto;
+    background-color: aqua;
+    /* max-width: 100px; */
+    background: url(../../images/index/back.jpg) fixed top no-repeat;
+}
+
+nav {
+    position: relative;
+    width: 13rem;
+    height: 1.5rem;
+    background-color: antiquewhite;
+    margin: 0 auto;
+    margin-top: .75rem;
+    border-radius: 15px;
+    background-color: rgba(13, 5, 5, 0.2);
+    box-shadow:
+        5px 5px 10px rgba(0, 0, 0, .2);
+    /* border: 0.2px solid black; */
+}
+
+nav span {
+    position: absolute;
+    display: block;
+}
+
+/* 搜素图标 */
+.nav-search {
+    width: 1.5rem;
+    height: 1.5rem;
+    /* background: url(../../images/index/seach.png) 100% 100%; */
+    top: 50%;
+    /* left: 10px; */
+    transform: translate(0, -50%);
+    /* background-color: antiquewhite; */
+}
+
+.an-contont {
+    position: absolute;
+    top: 30%;
+    width: 15rem;
+    text-align: center;
+}
+
+.an-contont1 img {
+    width: 3rem;
+    border-radius: 30%;
+    padding: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, .3);
+}
+
+.an-contont1 p {
+    font-size: 15px;
+    color: aliceblue;
+    margin-top: 15px;
+}
+
+.an-contont2 {
+    margin-top: 6.3333rem;
+    font-size: 13px;
+}
+
+.an-contont2 a {
+    padding: 0 10px;
+}
+
+.an-contont2 a:nth-child(2) {
+    border-left: 2px solid rgb(255, 255, 255);
+    border-right: 2px solid rgb(255, 255, 255);
+}
+
+.an-footr {
+    position: absolute;
+    color: aliceblue;
+    width: 100px;
+    font-size: 14px;
+    bottom: 2rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    /* margin: 0 auto; */
+
+}
+
+/* fudong */
+.fudongdonghua {
+    position: relative;
+    height: 60px;
+    /* width: 100px; */
+    /* margin: 0 auto; */
+}
+
+/* .fudongdonghuap{
+    margin-top: 40px;
+} */
+.topfloat {
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: 50%;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    margin: 0 auto;
+    transform: translate(-50%, 70%) rotate(-45deg);
+    animation: top1 1s infinite;
+}
+
+.topfloat2 {
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    animation: top2 1s infinite .2s;
+}
+
+@keyframes top1 {
+    0% {}
+
+    50% {
+        top: -15px;
+        transform: translate(-50%, 70%) rotate(-45deg) scale(1.2);
+    }
+}
+
+@keyframes top2 {
+    0% {}
+
+    50% {
+        top: -5px;
+        transform: translate(-50%, 70%) rotate(-45deg) scale(1.2);
+    }
+}
+
+.slither-content {
+    /* width: 100%; */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+    position: absolute;
+    bottom: -100%;
+    /* transition: 1s; */
+    display: none;
+    position: fixed;
+    overflow: auto;
+}
+
+.slither-content2 {
+    display: block;
+    animation: top5 1s forwards;
+}
+
+@keyframes top5 {
+    0% {}
+
+    100% {
+        top: 0px;
+    }
+}
+
+.an-contont1 img {
+    transition: .2s;
+}
+
+.imgselecy {
+    /* transform: scale(1.2); */
+}
+
+@keyframes imgsdf {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.serctionnav {
+    width: 15rem;
+    position: fixed;
+    background: none;
+    box-shadow: none;
+    display: flex;
+    /* margin-bottom: 20px; */
+    top: 0px;
+}
+
+.serctionnavbrack img {
+    position: absolute;
+    width: 20px;
+    margin-left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    /* float: left; */
+
+}
+
+.serctionnav12 {
+    position: relative;
+    width: 100%;
+    display: flex;
+    font-size: 17px;
+    /* justify-content: center; */
+    line-height: 40px;
+    color: aliceblue;
+    /* margin-bottom: 20px; */
+
+}
+
+.serctionnav12 ul {
+    width: 100%;
+    display: flex;
+    /* margin-bottom: 40px; */
+}
+
+.serctionnav12 li {
+    flex: 1px;
+    text-align: center;
+    list-style: none;
+}
+
+.serctionnav12slither {
+    position: absolute;
+    width: 100px;
+    border: 1px solid beige;
+    bottom: -10px;
+    transition: all .2s;
+    transform: translateX(47px);
+}
+
+.slicterCon999 {
+    display: none;
+    width: 100%;
+    font-size: 15px;
+    margin-top: 70px;
+}
+
+.serctionnavbrackimg {
+    z-index: 1;
+    padding: 10px 10px;
+}
+
+.slicterCon0 {
+    display: block;
+}
+
+.scerchbox {
+    width: 100%;
+    height: 200px;
+    /* background-color: antiquewhite; */
+    text-align: center;
+}
+
+.sechboxtop input[type="search"] {
+    /* margin: 0 auto; */
+    width: 50%;
+    /* height: 25px; */
+    margin-top: 100px;
+    background-color: rgba(0, 0, 0, .1);
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 10px;
+}
+
+.sechboxtop input[type="search"]:focus {}
+
+.schpbox p {
+    margin-top: 40px;
+    color: #fff;
+    font-size: 13px;
+}
+
+/* 列表展示 */
+.searchcon {
+    margin-top: 100px;
+}
+
+.searchcon45 {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #ffffffa4;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+.searchcon45 h3 {
+    float: left;
+    font-size: 20px;
+    display: flex;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.searchcon45 h4 {
+    display: flex;
+    float: right;
+    font-size: 15px;
+    vertical-align: middle;
+}
+
+.searchcon45 p {
+    margin-top: 40px;
+    color: #000000;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.searchcon45 pre {
+    width: 100%;
+    text-align: right;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.searchcon45 h3::before {
+    display: block;
+    content: "";
+    width: 30px;
+    height: 30px;
+    display: block;
+    background: url(../../images/index/ziliao.png) no-repeat;
+    background-size: 100%;
+}
+
+.searchcon45 h4::before {
+    display: block;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: url(../../images/index/hos.png) no-repeat;
+    background-size: 100%;
+    margin-right: 10px;
+}
+
+
+
+
+.header {
+    position: relative;
+    text-align: center;
+    background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
+    /* 	background: #FFAFBD;  
+	background: -webkit-linear-gradient(to right, #ffc3a0, #FFAFBD);  
+	background: linear-gradient(to right, #ffc3a0, #FFAFBD); 
+ */
+    color: white;
+}
+
+
+.inner-header {
+    height: 65vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px;
+    /*Fix for safari gap*/
+    min-height: 100px;
+    max-height: 150px;
+}
+
+.content {
+    position: relative;
+    height: 20vh;
+    text-align: center;
+    background-color: white;
+}
+
+.content a {
+    margin: 0 5px;
+    font-size: 12px;
+    color: #333;
+}
+
+.content a:hover {
+    color: #000;
+}
+
+/* Animation */
+
+.parallax>use {
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+    .waves {
+        height: 40px;
+        min-height: 40px;
+    }
+
+    .content {
+        height: 30vh;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
+
+
+
+
+.siltoolbox {
+    position: relative;
+    width: 14rem;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.66);
+}
+
+.siltoolbox h4 {
+    padding: 10px 10px;
+    font-size: 20px;
+    display: flex;
+}
+
+.siltoolbox h4 img {
+    width: 25px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.siltoolbox p {
+    padding: 5px 10px;
+    position: relative;
+}
+
+.siltoolbox p span {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: 1.8px solid blueviolet;
+    margin: 0 5px;
+    font-size: 12px;
+}
+.siltoolbox pre{
+    position: absolute;
+    top: 50px;
+    width: 30px;
+    height: 30px;
+    right: 20px;
+    background: url(../../images/toolicon/downArrow.png);
+    background-size: 100%;
+}
+.siltoolbox ul{
+    display: grid;
+    grid-auto-rows: 0px;
+    text-align: center;
+    overflow: hidden;
+    transition: all .5s;
+}
+body .siltoolbox .siltoolboxtop40{
+    grid-auto-rows: 40px;
+}
+body .siltoolbox .siltoolboxulrad{  
+    animation: .3s key180 forwards;
+}
+@keyframes key180 {
+    0%{
+    }
+    100%{
+        transform:rotate(-180deg);
+    }
+}
+.siltoolbox ul li{
+    /* display: block; */
+    list-style: none;
+    /* border: 1px solid black; */
+    position: relative;
+    background-color: rgba(0, 0, 0, .1);
+
+  
+}
+.siltoolbox ul li a{
+    color: #00a023;
+    line-height: 40px;
+   
+}

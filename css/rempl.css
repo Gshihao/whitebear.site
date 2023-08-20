@@ -1,0 +1,71 @@
+/*默认划分15等份*/
+html{
+    font-size:50px;
+    }
+ /*媒体查询 屏幕小于等于 320 px*/
+ @media screen and (min-width:320px){
+   html{
+     font-size:21.333px;
+     }
+   }
+ /*媒体查询 屏幕小于等于 360 px*/
+ @media screen and (min-width:360px){
+   html{
+     font-size:24px;
+     }
+   }
+ /*媒体查询 屏幕小于等于 375 px iPhone678*/
+ @media screen and (min-width:375px){
+   html{
+     font-size:25px;
+     }
+   }
+ /*媒体查询 屏幕小于等于 384 px*/
+ @media screen and (min-width:384px){
+   html{
+     font-size:25.6px;
+     }
+   }
+ /*媒体查询 屏幕小于等于 400 px*/
+ @media screen and (min-width:400px){
+   html{
+     font-size:26.666px;
+     }
+   }
+ /*媒体查询 屏幕小于等于 414 px*/
+ @media screen and (min-width:414px){
+   html{
+     font-size:27.6px;
+     }
+   }
+ /*媒体查询 屏幕小于等于 424 px*/
+ @media screen and (min-width:424px){
+   html{
+     font-size:28.2666px;
+     }
+   }
+ /*媒体查询 屏幕小于等于 480 px*/
+ @media screen and (min-width:480px){
+   html{
+     font-size:32px;
+     }
+   }
+ /*媒体查询 屏幕小于等于 540 px*/
+ @media screen and (min-width:540px){
+   html{
+     font-size:39px;
+     }
+   }
+ /*媒体查询 屏幕小于等于 720 px*/
+ @media screen and (min-width:720px){
+   html{
+     font-size:48px;
+     }
+   }
+ /*媒体查询 屏幕小于等于 750 px*/
+ @media screen and (min-width:750px){
+   html{
+     font-size:50px;
+     }
+   }
+ 

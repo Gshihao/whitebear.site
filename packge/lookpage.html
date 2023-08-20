@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="referrer" content="no-referrer">
+
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/rempl.css">
+    <link rel="stylesheet" href="../css/lookpage/loookAndroid.css">
+    <title></title>
+</head>
+
+<body>
+    <nav>
+        <a href="../index.html?ifbreak=true">返回首页</a>
+    </nav>
+    <section class="looknav">
+        <h3>获取标题中</h3>
+        <h4>获取作者中</h4>
+        <p>
+            <span>获取时间</span>
+            <span>点赞数</span>
+        </p>
+        <hr>
+    </section>
+
+    <section class="lookcon">
+
+    </section>
+    <section class="fouter">
+        <span class="dianzan">
+            <svg t="1692344020334" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                p-id="982" width="200" height="200">
+                <path
+                    d="M261.056 896C187.52 896 128 838.72 128 768V448c0-70.72 59.52-128 133.056-128H384v0.064h39.168c23.936 0 45.888-13.312 56.96-34.56 19.392-37.632 29.888-68.672 31.36-92.992L512 178.304C512 115.2 563.2 64 626.304 64H640a128 128 0 0 1 128 128v128h58.944C900.48 320 960 377.28 960 448c0 9.344-1.088 18.624-3.2 27.776l-62.336 269.888C874.24 833.472 793.216 896 699.648 896H261.12z m0-512c-36.096 0-64.96 25.472-68.672 57.152L192 448v320c0 32.448 26.432 60.096 61.44 63.616l7.616 0.384H320V384h-58.944zM640 128h-13.696c-25.6 0-46.784 19.2-49.92 45.568l-0.448 6.784-0.512 16.256c-2.24 34.624-15.36 73.408-38.528 118.4A128.128 128.128 0 0 1 433.28 383.68L423.104 384H384V832h315.648c60.608 0 112.896-37.76 129.92-91.2l2.56-9.6 62.336-269.824A59.328 59.328 0 0 0 896 448c0-32.448-26.432-60.096-61.44-63.616L826.944 384H704V192a64 64 0 0 0-56.512-63.552L640 128z"
+                    fill="#1afa29" p-id="983"></path>
+            </svg>
+        </span>
+        <span class="anhui icon2">
+            <svg t="1692343692126" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                p-id="2405" width="200" height="200">
+                <path
+                    d="M800 170.656a32 32 0 0 1-32 32H256a32 32 0 0 1 0-64h512a32 32 0 0 1 32 32z m-256 247.936l116.032 116.032a32 32 0 0 0 45.248-45.248l-141.536-141.536a200.864 200.864 0 0 0-19.264-17.76c-7.52-5.728-18.24-11.904-32.48-11.904s-24.96 6.176-32.48 11.904c-6.4 4.896-13.088 11.584-19.296 17.76l-1.024 1.056-140.512 140.48a31.968 31.968 0 1 0 45.248 45.248l116.032-116.032-0.032 434.72a32 32 0 0 0 64 0l0.032-434.752z"
+                    p-id="2406" fill="#1afa29"></path>
+            </svg>
+        </span>
+    </section>
+    <script>
+        let herhd = window.location.href;
+        // console.log(herhd);
+        const utitle = document.querySelector(".looknav h3");
+        const uname = document.querySelector(".looknav h4");
+        const utime = document.querySelector(".looknav p span:nth-child(1)");
+        const ulike = document.querySelector(".looknav p span:nth-child(2)");
+        const ucon = document.querySelector(".lookcon ");
+
+        let shspaid = herhd.split("?")[1].split("=")[1];
+        let ajax = new XMLHttpRequest();
+        let ifyour = false;
+        ajax.open("get", "http://120.48.169.127/myapi");
+        ajax.send();
+        ajax.onreadystatechange = function () {
+            if (ajax.readyState == 4 && ajax.status == 0 | 200) {
+                var poa = ajax.responseText;
+                var obje = JSON.parse(poa)[2];
+                for (let i in obje) {
+                    // console.log(i);
+                    let kji = obje[i];
+                    if (shspaid == kji.pp.spaceused) {
+                        ifyour = true;
+
+                        // 对JSON对象进行解构
+                        const { pp, tl, mt } = kji; // {pp} 内容对象 {ti}标题 {mt} 时间戳
+                        const { dg, pr } = pp; // {dg} 内容 {pr} 点赞量
+
+                        // 设置相关内容
+                        utitle.innerText = tl; // 设置标题
+                        uname.innerText = "SHAO"; // 设置 作者
+                        utime.innerText = timestampToTime(mt)  // 设置时间
+                        ulike.innerText = pr  // 设置点赞的数量
+                        ucon.innerHTML = dg
+
+                        // 设置 网页标题，关键字
+                        document.title = "" + kji.tl.split(".")[0];
+                        let meta = document.querySelector('meta[name="keywords"]');
+                        meta.setAttribute('content', kji.tl.split(".")[0] + '，博客,SHAO,个人博客,网站,个人,工具,文章,教学');
+
+                        // 加载highlight代码高亮
+                        Setcodue();
+                    }
+                }
+            }
+        }
+
+
+        // 返回顶部按钮功能
+        /*回到顶端*/
+        const anhui = document.querySelector(".anhui");
+        anhui.addEventListener("click",tiaozhiampinhjixkdk)
+        function tiaozhiampinhjixkdk() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        // 点赞
+        const dianzan14 = document.querySelector(".dianzan")
+        dianzan14.addEventListener("click", dianzan)
+        function dianzan() {
+            var ajax = new XMLHttpRequest();
+            var sHref = window.location.href;
+            var shspaid = sHref.split("?")[1].split("=")[1].split("/")[2];
+            console.log(shspaid)
+            ajax.open("get", "http://120.48.169.127/mapan?url=" + shspaid);
+            ajax.send();
+            ajax.onreadystatechange = function () {
+                if (ajax.readyState == 4 && ajax.status == 0 | 200) {
+                    var poa = JSON.parse(ajax.responseText);
+                    if (poa != null) {
+                        alert('点赞成功')
+                        dianzan14.style.display = "none"
+                        ulike.innerHTML = " poa.pr"
+
+                    }
+                }
+            }
+        }
+
+
+
+
+
+        function timestampToTime(timestamp) {
+            var date = new Date(timestamp * 1000);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+            var Y = date.getFullYear() + '-';
+            var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+            var D = date.getDate() + ' ';
+            var h = date.getHours() + ':';
+            var m = date.getMinutes() + ':';
+            var s = date.getSeconds();
+            return Y + M + D + h + m + s;
+        }
+        function Setcodue() {
+            // 
+            // 创建一个 <script> 元素
+            var script = document.createElement('script');
+            document.head.appendChild(script);
+            // 创建一个 <link> 元素
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = '//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css';
+            document.head.appendChild(link);
+
+            // 创建一个 <script> 元素
+            var script2 = document.createElement('script');
+            script2.src = '//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js';
+            document.head.appendChild(script2);
+        };
+        window.onload = function () {
+            // 调用 hljs.highlightAll()，高亮页面上的所有代码段
+            setTimeout(function () {
+                hljs.highlightAll();
+            }, 4000)
+            setTimeout(() => {
+                hljs.highlightAll();
+            }, 10000);
+        }
+
+    </script>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script><!--引用百度jqku-->
+
+</body>
+
+</html>

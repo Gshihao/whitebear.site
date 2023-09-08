@@ -245,7 +245,7 @@ nav span {
     display: none;
     width: 100%;
     font-size: 15px;
-    margin-top: 70px;
+    margin-top: 80px;
 }
 
 .serctionnavbrackimg {
@@ -490,7 +490,8 @@ nav span {
     margin: 0 5px;
     font-size: 12px;
 }
-.siltoolbox pre{
+
+.siltoolbox pre {
     position: absolute;
     top: 50px;
     width: 30px;
@@ -499,37 +500,72 @@ nav span {
     background: url(../../images/toolicon/downArrow.png);
     background-size: 100%;
 }
-.siltoolbox ul{
+
+.siltoolbox ul {
     display: grid;
-    grid-auto-rows: 0px;
     text-align: center;
     overflow: hidden;
     transition: all .5s;
+    grid-auto-rows: 0px;
+    grid-template-columns: repeat(1,100%);
+    grid-gap: 0px;
 }
-body .siltoolbox .siltoolboxtop40{
+
+.siltoolbox ul li {
+    /* grid-auto-rows: 0px; */
+   text-align: left;
+   text-indent: 3em;
+   /* list-style: circle; */
+   color: #000;
+}
+
+body .siltoolbox .siltoolboxtop40 {
+    transition: all 2s;
+    grid-auto-rows: 50px;
+
+}
+
+body .siltoolbox .siltoolboxulrad {
+    transition: all 2s;
+    animation: .3s key180 forwards;
     grid-auto-rows: 40px;
 }
-body .siltoolbox .siltoolboxulrad{  
-    animation: .3s key180 forwards;
-}
+
 @keyframes key180 {
-    0%{
-    }
-    100%{
-        transform:rotate(-180deg);
+    0% {}
+
+    100% {
+        transform: rotate(-180deg);
+
     }
 }
-.siltoolbox ul li{
+
+.siltoolbox ul li {
     /* display: block; */
     list-style: none;
     /* border: 1px solid black; */
     position: relative;
     background-color: rgba(0, 0, 0, .1);
 
-  
+
 }
-.siltoolbox ul li a{
-    color: #00a023;
+
+.siltoolbox ul li a {
+    color: #000000;
     line-height: 40px;
+    text-decoration:solid;
+}
+
+.slicterCona {
+    transition: all .2s;
+}
+.siltoolbox:nth-child(1){
+    margin-top: 10px;
+}
+.siltoolbox {
+    /* background: none; */
+    /* background-position: top;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(50px); */
    
 }

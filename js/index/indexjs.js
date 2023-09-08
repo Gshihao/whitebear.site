@@ -93,7 +93,7 @@ function lodingdat() {
        </div>
         `
       })
-      document.querySelector(".searchcon").innerHTML = str
+      document.querySelector(".searchcon").innerHTML = str.join("")
     }
   }
 }

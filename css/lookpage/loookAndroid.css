@@ -109,3 +109,9 @@ nav a::before{
 .fouter .icon2 svg{
     margin-left: 0px;
 }
+.lookcon{
+    width: 90%;
+}
+/* pre code.hljs{
+    padding: 5px;
+} */

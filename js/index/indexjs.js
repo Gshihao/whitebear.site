@@ -19,7 +19,7 @@ try {
   if (sherh.split("?")[1].split("=")[1]) {
     ifbreakbook(true)
   }
-} catch (e) { 
+} catch (e) {
   // throw new Error(e)
 }
 
@@ -81,6 +81,8 @@ function lodingdat() {
       str = dat.map((item) => {
         let { tl, mt, pp } = item;
         let { pr, dg, dgsa, spaceused } = pp;
+        dgsa = dgsa.replace('null','')
+        // 使用 replace 替换其中的违规字符串
         // console.log(tl.substring(0,6));
         tl = tl.length >= 7 ? tl = tl.substring(0, 6) + `...` : tl = tl;
         return ` 

@@ -3,6 +3,11 @@
 const anfootr = document.querySelector(".an-footr");
 const slither = document.querySelector(".slither-content")
 anfootr.addEventListener("click", ifbreakbook)
+
+/**
+ * 文章上滑隐藏
+ * @param {*} ifa 
+ */
 function ifbreakbook(ifa) {
   if (ifa) {
     document.querySelector(".nav").style.display = "none"
@@ -12,7 +17,6 @@ function ifbreakbook(ifa) {
   }
 }
 
-
 //判断herf 链接是否有内容
 try {
   const sherh = window.location.href;
@@ -21,6 +25,7 @@ try {
   }
 } catch (e) {
   // throw new Error(e)
+  
 }
 
 // 返回启动界面
@@ -50,11 +55,10 @@ imggpuyou.addEventListener("click", (e) => {
 const serctionnav12 = document.querySelector(".serctionnav12 ul");
 const serctionnav12slither = document.querySelector(".serctionnav12slither")
 serctionnav12.addEventListener("click", function (e) {
-  console.log(e.target.dataset.id);
+  // console.log(e.target.dataset.id);
   if (e.target.nodeName === "LI") {
     document.querySelector(`.slicterCon0`).classList.remove("slicterCon0")
     document.querySelector(` .slicterCon999:nth-child(${e.target.dataset.id})`).classList.add(`slicterCon0`);
-
     serctionnav12slither.style.transform = `translateX(${e.target.offsetLeft + 47}px)`;
   }
 })
@@ -81,7 +85,7 @@ function lodingdat() {
       str = dat.map((item) => {
         let { tl, mt, pp } = item;
         let { pr, dg, dgsa, spaceused } = pp;
-        dgsa = dgsa.replace('null','')
+        dgsa = dgsa.replace('null', '')
         // 使用 replace 替换其中的违规字符串
         // console.log(tl.substring(0,6));
         tl = tl.length >= 7 ? tl = tl.substring(0, 6) + `...` : tl = tl;
@@ -109,15 +113,16 @@ searchcon.addEventListener("click", function (e) {
     window.location.href = `../../packge/lookpage.html?id=${e.target.dataset.id}`
   }
 })
-
+/**
+ * 转换时间戳
+ * @param {*} timestamp 需要转换的事件
+ * @returns  Y + M + D + h + m + s;
+ */
 function timestampToTime(timestamp) {
   // 时间戳为10位需*1000，时间戳为13位不需乘1000
   var date = new Date(timestamp * 1000);
   var Y = date.getFullYear() + "-";
-  var M =
-    (date.getMonth() + 1 < 10
-      ? "0" + (date.getMonth() + 1)
-      : date.getMonth() + 1) + "-";
+  var M = (date.getMonth() + 1 < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1) + "-";
   var D = (date.getDate() < 10 ? "0" + date.getDate() : date.getDate()) + " ";
   var h = date.getHours() + ":";
   var m = date.getMinutes() + ":";

@@ -26,7 +26,7 @@
         </p>
         <hr>
     </section>
-
+  
     <section class="lookcon">
 
     </section>
@@ -92,6 +92,15 @@
 
                         // 加载highlight代码高亮
                         Setcodue();
+                        return false
+                    }else{
+                        // 当url 不合法时
+                        // if (!ifyour )
+                        document.write("<p>url 错误，将在5秒后刷新页面</p>");
+                        setTimeout(() => {
+                            location.href="../index.html"
+                        }, 5*1000);
+                        return false
                     }
                 }
             }
@@ -162,17 +171,20 @@
         };
         window.onload = function () {
             // 调用 hljs.highlightAll()，高亮页面上的所有代码段
-            setTimeout(function () {
-                hljs.highlightAll();
-            }, 4000)
-            setTimeout(() => {
-                hljs.highlightAll();
-            }, 10000);
+            try {
+                setTimeout(function () {
+                    hljs.highlightAll();
+                }, 4000)
+                setTimeout(() => {
+                    hljs.highlightAll();
+                }, 10000);
+            } catch (e) {
+                //  页面加载错误时，不报出erro
+            }
         }
 
     </script>
     <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script><!--引用百度jqku-->
-
 </body>
 
 </html>

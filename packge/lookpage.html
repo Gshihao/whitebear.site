@@ -83,10 +83,11 @@
                 if (ajax.readyState == 4 && ajax.status == 0 | 200) {
                     var poa = ajax.responseText;
                     var obje = JSON.parse(poa)[2];
+                    // console.log(obje);
                     for (let i in obje) {
-                        // console.log(i);
+                        // console.log(parseInt(i) === parseInt(obje.length - 1),obje.length - 1 );
                         let kji = obje[i];
-                        if (shspaid == kji.pp.spaceused) {
+                        if (shspaid === kji.pp.spaceused) {
                             ifyour = true;
 
                             // 对JSON对象进行解构
@@ -110,9 +111,9 @@
                             // 加载highlight代码高亮
                             Setcodue();
                             return false
-                        } else {
+                        } else if(parseInt(i) === parseInt(obje.length - 1)){
                             // 当url 不合法时
-                            // if (!ifyour )
+                            // 2323/10/10 21:41 修复了url 不合法bug
                             document.write("<p>url 错误，将在5秒后刷新页面</p>");
                             setTimeout(() => {
                                 location.href = "../index.html"

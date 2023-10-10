@@ -1,4 +1,14 @@
 
+
+console.log("自大源于无知");
+console.log("浪漫不一定非得要一束花，也可以是有人愿意听你讲一堆废话")
+console.log("点击狗头积攒功德")
+/**
+ * 此功能可以禁止log
+ */
+console.log = function(){}
+console.error = function(){}
+
 // 文章上滑
 const anfootr = document.querySelector(".an-footr");
 const slither = document.querySelector(".slither-content")

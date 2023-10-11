@@ -185,6 +185,10 @@
             var script2 = document.createElement('script');
             script2.src = '//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js';
             document.head.appendChild(script2);
+
+            var script3 = document.createElement('script');
+            script3.src="../js/look/pic.js";
+           document.head.appendChild(script3)
         };
         window.onload = function () {
             // 调用 hljs.highlightAll()，高亮页面上的所有代码段

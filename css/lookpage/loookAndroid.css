@@ -10,15 +10,18 @@ body {
     /* max-width: 100px; */
     background: url(../../images/index/back.jpg) fixed top no-repeat;
 }
-nav{
-    padding:20px 20px ;
+
+nav {
+    padding: 20px 20px;
     font-size: 15px;
 }
-nav a{
+
+nav a {
     display: flex;
     width: 100px;
 }
-nav a::before{
+
+nav a::before {
     content: "";
     display: block;
     background: url(../../images/look/home.png) no-repeat;
@@ -27,24 +30,28 @@ nav a::before{
     background-size: 100%;
     margin-right: 10px;
 }
-.looknav{
+
+.looknav {
     width: 80%;
     margin: 0 auto;
     font-size: 14px;
 }
-.looknav h3{
-   /* width: 100%; */
-   text-align: center;
-   margin-top: 90px;
-   font-size: 20px;
-   color: rgb(255, 255, 255);
+
+.looknav h3 {
+    /* width: 100%; */
+    text-align: center;
+    margin-top: 90px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
 }
-.looknav h4{
+
+.looknav h4 {
     text-align: center;
     margin-top: 10px;
     color: aliceblue;
 }
-.looknav p{
+
+.looknav p {
     display: flex;
     margin-top: 70px;
     justify-content: space-between;
@@ -52,66 +59,87 @@ nav a::before{
     font-size: 12px;
     margin-bottom: 10px;
 }
-.looknav p span:nth-child(1){}
-.looknav p span:nth-child(2){
+
+.looknav p span:nth-child(1) {}
+
+.looknav p span:nth-child(2) {
     display: flex;
 }
-.looknav p span:nth-child(2)::before{
-   content: '';
-   width: 20px;
-   background: url(../../images/look/like.png) no-repeat;
-   background-size: 100%;
-   margin-right: 5px;
+
+.looknav p span:nth-child(2)::before {
+    content: '';
+    width: 20px;
+    background: url(../../images/look/like.png) no-repeat;
+    background-size: 100%;
+    margin-right: 5px;
 }
 
 
-.lookcon{
+.lookcon {
     width: 80%;
     overflow: hidden;
-    margin:  0 auto;
+    margin: 0 auto;
     font-size: 14px;
     padding: 10px 0;
 }
-.lookcon code{
+
+.lookcon code {
     border-radius: 4px;
     /* padding: 10px 0; */
     /* margin: 10px 0; */
 }
-.lookcon img{
+
+.lookcon img {
     width: 100%;
     /* border-radius: 10px; */
     padding: 5px 0;
 }
-.lookcon p{
+
+.lookcon p {
     margin: 5px 0;
     color: aliceblue;
     text-indent: 2em;
 
 }
-.lookcon a{
+
+.lookcon a {
     color: rgb(194, 129, 255);
     display: block;
     /* overflow: scroll; */
-    background-color: rgba(255, 227, 194,8);
+    background-color: rgba(255, 227, 194, 8);
     padding: 10px 5px;
     border-radius: 10px;
 }
-.fouter{
+
+.fouter {
     width: 15rem;
     display: flex;
     justify-content: center;
 }
-.fouter svg{
+
+.fouter svg {
     margin-right: 50px;
     width: 60px;
     /* color: blue; */
 }
-.fouter .icon2 svg{
+
+.fouter .icon2 svg {
     margin-left: 0px;
 }
-.lookcon{
+
+.lookcon {
     width: 90%;
 }
+
 /* pre code.hljs{
     padding: 5px;
 } */
+
+
+/* 图片预览 */
+.picnbod {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
